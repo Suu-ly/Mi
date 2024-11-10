@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import ScrollToTop from "./components/scrollToTop";
 import About from "./routes/about";
 import Article from "./routes/Article";
 import Blog from "./routes/Blog";
@@ -14,20 +15,23 @@ import Sustainability from "./routes/sustainability";
 
 function App() {
   return (
-    <Routes location={location} key={location.pathname}>
-      <Route path="/" element={<Home />} />
-      <Route path="/product" element={<Product />} />
-      <Route path="/sustainability" element={<Sustainability />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/order" element={<Order />} />
-      <Route path="/checkout" element={<Checkout />} />
-      <Route path="/support" element={<Support />} />
-      <Route path="/user-guide" element={<Guide />} />
-      <Route path="/blog" element={<Blog />} />
-      <Route path="/article/:id" element={<Article />} />
-      <Route path="/privacy" element={<Privacy />} />
-      <Route path="/*" element={<Error />} />
-    </Routes>
+    <>
+      <ScrollToTop />
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<Home />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/sustainability" element={<Sustainability />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/order" element={<Order />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/support" element={<Support />} />
+        <Route path="/user-guide" element={<Guide />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/article/:id" element={<Article />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/*" element={<Error />} />
+      </Routes>
+    </>
   );
 }
 
