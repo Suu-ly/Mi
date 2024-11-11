@@ -3,7 +3,7 @@ import Splash from "@/components/splash";
 import Button from "@/components/ui/button";
 import MiText from "@/components/ui/miText";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import HomeSplash from "../assets/home_splash.png";
 
