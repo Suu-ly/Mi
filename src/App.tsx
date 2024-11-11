@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import ScrollToTop from "./components/scrollToTop";
 import About from "./routes/about";
-import Article from "./routes/Article";
-import Blog from "./routes/Blog";
+import Article from "./routes/article";
+import Blog from "./routes/blog";
 import Checkout from "./routes/checkout";
 import Error from "./routes/error";
 import Guide from "./routes/guide";
