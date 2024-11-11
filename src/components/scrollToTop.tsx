@@ -8,11 +8,10 @@ const ScrollToTop = () => {
   const Lenis = useLenis();
 
   useLayoutEffect(() => {
-    console.log("Location changed");
     Lenis?.stop();
     window.scrollTo(0, 0);
     Lenis?.start();
-  }, [location.pathname]);
+  }, [location.pathname, Lenis]);
   return <></>;
 };
 
