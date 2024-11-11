@@ -30,7 +30,7 @@ const Splash = ({
 
   return (
     <motion.section
-      className="flex min-h-svh w-full"
+      className="flex h-svh w-full"
       style={squeeze ? { scale } : undefined}
     >
       {children}

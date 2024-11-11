@@ -14,7 +14,7 @@ const Guide = () => {
       </Helmet>
       <main className="flex flex-col gap-48">
         <Splash src={HomeSplash} alt="Xiaomi Smart Air Purifier 4">
-          <div className="flex min-h-svh w-full items-end justify-end px-4 py-12 md:px-16 md:py-32">
+          <div className="flex size-full items-end justify-end px-4 py-12 md:px-16 md:py-32">
             <div className="flex max-w-lg flex-col items-end gap-8 text-right">
               <MaskText variant="splash" text="User Guide" />
               <MiText className="font-medium text-slate-800">
