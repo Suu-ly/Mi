@@ -75,13 +75,12 @@ const Sustainability = () => {
             text="Protecting our planet."
             className="mb-8 text-emerald-600"
           />
-          <MaskText
-            variant="body"
-            text="At Xiaomi, we’re committed to clean air and a healthy planet. Our
+          <MiText>
+            At Xiaomi, we’re committed to clean air and a healthy planet. Our
             mission is to improve indoor air quality with products designed for
             sustainability, using eco-friendly materials and energy-efficient
-            designs every step of the way."
-          />
+            designs every step of the way.
+          </MiText>
         </div>
         <section className="relative h-screen w-screen">
           <Carousel
@@ -112,11 +111,9 @@ const Sustainability = () => {
                         text={src.header}
                         className="mb-8 text-slate-50"
                       />
-                      <MaskText
-                        variant="body"
-                        text={src.description}
-                        className="mb-8 text-slate-100"
-                      />
+                      <MiText className="mb-8 text-slate-100">
+                        {src.description}
+                      </MiText>
                       <Button asChild className="w-48">
                         <Link to="/product">Learn More</Link>
                       </Button>
@@ -134,7 +131,7 @@ const Sustainability = () => {
             <img
               src={EcoFriendly}
               alt="Eco-Friendly Materials"
-              className="h-[700px] w-full max-w-full object-cover object-center"
+              className="h-[700px] w-full max-w-full rounded-3xl object-cover object-center"
             />
             <MaskText
               variant="header"
@@ -151,7 +148,7 @@ const Sustainability = () => {
             <img
               src={Durability}
               alt="Long-Lasting Durability"
-              className="h-[700px] w-full max-w-full object-cover object-center"
+              className="h-[700px] w-full max-w-full rounded-3xl object-cover object-center"
             />
             <MaskText
               variant="header"
@@ -176,11 +173,12 @@ const Sustainability = () => {
                 text="Smart Sensors"
                 className="text-emerald-50"
               />
-              <MaskText
-                variant="body"
-                text="Advanced sensors detect air quality in real-time, adjusting power usage to meet only the necessary level of purification. This reduces energy consumption, ultimately lowering your carbon footprint."
-                className="font-light text-slate-200"
-              />
+              <MiText className="font-light text-slate-200">
+                Advanced sensors detect air quality in real-time, adjusting
+                power usage to meet only the necessary level of purification.
+                This reduces energy consumption, ultimately lowering your carbon
+                footprint.
+              </MiText>
             </div>
           </div>
         </section>
@@ -221,36 +219,32 @@ const Sustainability = () => {
             `Join us on this journey to breathe better, live responsibly, and create lasting change.`,
             `Together, we can enjoy cleaner air and a cleaner planet.`,
           ].map((text) => (
-            <MaskText variant="body" text={text} />
+            <MiText>{text}</MiText>
           ))}
         </div>
         <section className="flex max-w-full flex-col items-center px-16 text-center md:px-32">
-          <MaskText
-            variant="header"
-            text="Affirmation & Glory"
-            className="mb-16"
-          />
+          <MaskText variant="header" text="Our Awards" className="mb-16" />
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <img
               src={Award1}
               alt="Award 1"
-              className="h-auto w-full object-cover"
+              className="h-auto w-full rounded-3xl object-cover"
             />
             <img
               src={Award2}
               alt="Award 2"
-              className="h-auto w-full object-cover"
+              className="h-auto w-full rounded-3xl object-cover"
             />
             <img
               src={Award3}
               alt="Award 3"
-              className="h-auto w-full object-cover"
+              className="h-auto w-full rounded-3xl object-cover"
             />
             <div className="flex items-center justify-center md:col-span-3">
               <img
                 src={Award4}
                 alt="Award 4"
-                className="h-auto w-3/4 max-w-xs object-cover md:w-1/2 lg:w-1/3"
+                className="h-auto w-3/4 max-w-xs rounded-3xl object-cover md:w-1/2 lg:w-1/3"
               />
             </div>
           </div>
