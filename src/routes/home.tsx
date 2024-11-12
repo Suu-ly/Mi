@@ -65,7 +65,7 @@ const keyFeatures = [
   },
   {
     title: "Smart Control",
-    body: "Easily manage your air quality with your smart home app of choice",
+    body: "Easily manage your air quality with your smart home app of choice.",
     image: Smart,
   },
   {
@@ -134,7 +134,7 @@ const reviews = [
 const promotion = [
   {
     title: "Extended coverage",
-    body: "Get an additional year of warranty and use your air purifier worry-free",
+    body: "Get an additional year of warranty and use your air purifier worry-free.",
     pic: Warranty,
   },
   {
