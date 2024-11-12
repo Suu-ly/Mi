@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ComponentProps, useRef } from "react";
 
@@ -13,6 +14,7 @@ const Splash = ({
   alt,
   parallax = true,
   squeeze = true,
+  className,
   children,
 }: SplashProps) => {
   const splash = useRef(null);
@@ -30,7 +32,7 @@ const Splash = ({
 
   return (
     <motion.section
-      className="flex h-svh w-full"
+      className={cn("flex h-svh w-full", className)}
       style={squeeze ? { scale } : undefined}
     >
       {children}

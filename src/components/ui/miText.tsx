@@ -5,9 +5,9 @@ import { forwardRef, HTMLAttributes } from "react";
 const textVariants = cva("", {
   variants: {
     variant: {
-      body: "text-lg md:text-2xl",
-      splash: "text-4xl md:text-6xl font-display font-semibold",
-      header: "text-3xl md:text-5xl font-display font-semibold",
+      body: "text-lg sm:text-xl lg:text-2xl",
+      splash: "font-display text-4xl font-semibold sm:text-5xl lg:text-6xl",
+      header: "font-display text-3xl font-semibold sm:text-4xl lg:text-5xl",
     },
   },
   defaultVariants: {
