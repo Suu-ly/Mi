@@ -460,7 +460,7 @@ const Home = () => {
                   />
                 </AspectRatio>
                 <h6
-                  className={`mb-2 font-display text-2xl font-semibold transition-colors duration-500 md:min-w-56 ${flipped ? "text-slate-50" : "text-slate-900"}`}
+                  className={`mb-2 font-display text-2xl font-semibold transition-colors duration-500 ${flipped ? "text-slate-50" : "text-slate-900"}`}
                 >
                   {promo.title}
                 </h6>
