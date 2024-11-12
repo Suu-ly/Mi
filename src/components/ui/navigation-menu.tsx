@@ -96,7 +96,6 @@ const NavigationMenuLink = React.forwardRef<
 >(({ className, to, children, ...props }, ref) => {
   const location = useLocation();
   const active = to === location.pathname;
-  console.log(active);
   return (
     <NavigationMenuPrimitive.Link
       ref={ref}
