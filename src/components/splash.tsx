@@ -42,6 +42,7 @@ const Splash = ({
       >
         <motion.img
           style={parallax ? { y } : undefined}
+          loading="eager"
           src={src}
           ref={splash}
           alt={alt}

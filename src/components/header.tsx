@@ -148,7 +148,7 @@ const Header = () => {
             <NavigationMenuItem>
               <NavigationMenuLink
                 to="/order"
-                className="w-28 bg-emerald-400 hover:bg-emerald-400/90"
+                className="w-28 bg-emerald-400 hover:bg-emerald-400/90 data-[active]:text-slate-700"
               >
                 Order now
               </NavigationMenuLink>
@@ -202,6 +202,13 @@ const Header = () => {
       >
         <motion.ul
           layoutId="nav-background"
+          initial={{
+            top: 24,
+            right: 24,
+            width: 176,
+            height: 56,
+            borderRadius: 28,
+          }}
           animate={
             open
               ? {
