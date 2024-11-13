@@ -89,10 +89,14 @@ const About = () => {
         </section>
         {/* <div className="h-[200vh]"></div>   ??? whats this ? */}
 
-        <section className="flex flex-col px-4 py-20 md:px-16 md:py-24">
-          <div className="3xl:flex-row-reverse flex w-full flex-col-reverse justify-center gap-16 md:flex-row">
-            <div className="flex w-full flex-col items-start justify-center gap-8">
-              <MaskText variant="header" text="Our Mission" />
+        <section className="flex flex-col gap-24 px-4 py-20 md:gap-0 md:px-16 md:py-24">
+          <div className="3xl:flex-row-reverse flex w-full flex-col-reverse justify-center gap-16 py-12 md:flex-row md:py-0">
+            <div className="flex w-full flex-col items-center justify-center gap-8 md:items-start">
+              <MaskText
+                variant="header"
+                text="Our Mission"
+                className="mt-3 md:mt-0"
+              />
               <div className="flex flex-col gap-4">
                 <MiText>
                   Our mission goes beyond air purification; it’s about making a
@@ -122,9 +126,13 @@ const About = () => {
             </AspectRatio>
             {/* </div> */}
           </div>
-          <div className="flex w-full flex-col justify-center gap-16 md:flex-row-reverse">
-            <div className="flex w-full flex-col items-start justify-center gap-8">
-              <MaskText variant="header" text="We Care" />
+          <div className="flex w-full flex-col-reverse justify-center gap-16 py-12 md:flex-row-reverse md:py-0">
+            <div className="flex w-full flex-col items-center justify-center gap-8 md:items-start">
+              <MaskText
+                variant="header"
+                text="We Care"
+                className="mt-3 md:mt-0"
+              />
               <div className="flex flex-col gap-4">
                 <MiText>
                   For us, clean air isn’t just a goal—it’s a shared commitment.
