@@ -197,11 +197,9 @@ const Header = () => {
               staggerChildren: 0.05,
             },
           },
-          closed: {},
         }}
       >
         <motion.ul
-          layoutId="nav-background"
           initial={{
             top: 24,
             right: 24,
@@ -235,7 +233,7 @@ const Header = () => {
                   },
                 }
           }
-          className="fixed -z-10 overflow-hidden bg-white"
+          className="fixed -z-10 overflow-hidden bg-white lg:hidden"
         >
           <div className="absolute left-8 flex flex-col justify-center gap-8 pt-32">
             <motion.li variants={itemVariants} className="list-none">
