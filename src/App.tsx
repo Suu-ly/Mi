@@ -1,6 +1,6 @@
 import { AnimatePresence } from "framer-motion";
 import { Route, Routes, useLocation } from "react-router-dom";
-import Transition from "./components/Transition";
+import Transition from "./components/transition";
 import About from "./routes/about";
 import Article from "./routes/article";
 import Blog from "./routes/blog";
