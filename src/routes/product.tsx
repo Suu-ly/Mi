@@ -37,6 +37,10 @@ const Product = () => {
             Designed to tackle indoor air pollution head-on and ensure that
             every breath you take is pure and healthy.
           </MiText>
+          <MiText>
+            Designed to tackle indoor air pollution head-on and ensure that
+            every breath you take is pure and healthy.
+          </MiText>
         </div>
         <div className="h-[200vh]"></div>
       </main>
