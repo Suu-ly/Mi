@@ -205,7 +205,7 @@ const Home = () => {
           src={isLarge ? HomeSplash : HomeSplashCrop}
           alt="Xiaomi Smart Air Purifier 4"
         >
-          <div className="flex size-full justify-end px-4 py-12 md:items-end md:px-16 md:py-32">
+          <div className="flex size-full flex-col items-end justify-between gap-8 px-4 pb-16 pt-[104px] md:justify-end md:px-16 md:py-32">
             <div className="flex max-w-lg flex-col items-end gap-8 text-right">
               <MaskText
                 variant="splash"
@@ -215,10 +215,10 @@ const Home = () => {
                 Meet Xiaomi Smart Air Purifier 4, your new best friend for
                 cleaner, fresher air at home
               </MiText>
-              <Button asChild>
-                <Link to="/product">Discover More</Link>
-              </Button>
             </div>
+            <Button asChild>
+              <Link to="/product">Discover More</Link>
+            </Button>
           </div>
         </Splash>
         <section className="mb-48 h-[250vh]" ref={couchRef}>
