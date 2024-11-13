@@ -10,6 +10,7 @@ import Home from "./routes/home";
 import Order from "./routes/order";
 import Privacy from "./routes/privacy";
 import Product from "./routes/product";
+import Subscribe from "./routes/subscribe";
 import Support from "./routes/support";
 import Sustainability from "./routes/sustainability";
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/guide" element={<Guide />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/article/:id" element={<Article />} />
+        <Route path="/subscribe" element={<Subscribe />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/*" element={<Error />} />
       </Routes>
