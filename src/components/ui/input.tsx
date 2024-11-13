@@ -9,7 +9,7 @@ export interface InputProps
 }
 
 const inputVariants = cva(
-  "flex w-full border border-slate-300 bg-transparent rounded-3xl text-slate-900 ring-ring file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600  disabled:cursor-not-allowed disabled:opacity-50",
+  " flex w-full rounded-3xl border border-slate-300 bg-transparent text-slate-900 transition-shadow file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600  disabled:cursor-not-allowed disabled:opacity-50",
   {
     variants: {
       variant: {
