@@ -1,7 +1,7 @@
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { motion, Variants } from "framer-motion";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Button from "./ui/button";
 import {
   NavigationMenu,
@@ -28,6 +28,7 @@ const HeaderLink = ({ to, children }: HeaderLinkProps) => {
 };
 
 const Header = () => {
+  const location = useLocation();
   const [open, setOpen] = useState(false);
   const isMedium = useMediaQuery("(min-width: 768px)");
   const anim = {
@@ -54,6 +55,10 @@ const Header = () => {
       transitionEnd: { y: 20 },
     },
   };
+
+  useEffect(() => {
+    setOpen(false);
+  }, [location.pathname]);
 
   return (
     <header className="pointer-events-none fixed inset-x-0 top-0 z-50 px-4 py-6 md:px-6">
