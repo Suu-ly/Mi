@@ -27,7 +27,11 @@ const Blog = () => {
         <Splash src={HomeSplash} alt="Xiaomi Smart Air Purifier 4">
           <div className="flex min-h-svh w-full items-end justify-end px-4 py-12 md:px-16 md:py-32">
             <div className="flex max-w-lg flex-col items-end gap-8 text-right">
-              <MaskText variant="splash" text="Blog" />
+              <MaskText variant="splash" text="Home Essentials:" />
+              <MaskText
+                variant="splash"
+                text="Must-Have Items for a Healthier, Happier Living Space"
+              />
               <MiText className="font-medium text-slate-800">
                 Meet Xiaomi Smart Air Purifier 4, your new best friend for
                 cleaner, fresher air at home
@@ -49,42 +53,34 @@ const Blog = () => {
             every breath you take is pure and healthy.
           </MiText>
         </div>
-        <div className="h-[200vh]"></div>
+        {/* <div className="h-[200vh]"></div> */}
 
-        <section className="mb-48 flex flex-col items-center px-4 md:px-16">
+        <section className="mb-48 flex flex-col items-start px-4 md:px-16">
           <MaskText
             variant="header"
             text="Latest Articles"
             className={`mb-8`}
           />
           <FadeIn>
-            <MiText className={`mb-16 text-center`}>
-              Receive the following when you order now
-            </MiText>
-          </FadeIn>
-          {/* <FadeIn>
             <div className="mb-16 grid w-full grid-cols-1 gap-16 md:grid-cols-3 md:gap-8">
               {articles.map((article, index) => (
-                <div key={promo.title}>
-                  <AspectRatio ratio={3 / 2} className="mb-6">
-                    <img
-                      src={promo.pic}
-                      alt={promo.title}
-                      className="size-full rounded-3xl object-cover"
-                    />
-                  </AspectRatio>
-                  <h6 className={`mb-2 font-display text-2xl font-semibold`}>
-                    {promo.title}
-                  </h6>
-                  <p>{promo.body}</p>
+                <div key={index}>
+                  <Link to={`/article/${index}`}>
+                    <AspectRatio ratio={3 / 2} className="mb-6">
+                      <img
+                        src={article.pic}
+                        alt={article.title}
+                        className="size-full rounded-3xl object-cover"
+                      />
+                    </AspectRatio>
+                    <h6 className={`mb-2 font-display text-2xl font-semibold`}>
+                      {article.title}
+                    </h6>
+                    <p>{article.date}</p>
+                  </Link>
                 </div>
               ))}
             </div>
-          </FadeIn> */}
-          <FadeIn>
-            <Button asChild>
-              <Link to="/order">Order now</Link>
-            </Button>
           </FadeIn>
         </section>
       </main>

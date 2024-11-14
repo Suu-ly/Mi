@@ -16,69 +16,34 @@ export const articles: ArticleType = [
     pic: Article6,
     content: [
       {
-        type: "paraText",
-        text: "Air purifiers have become more popular as people learn about the importance of indoor air quality. However, misconceptions about their effectiveness and functions abound. Here’s a closer look at common myths surrounding air purifiers and what the science actually says.",
-        style: "font-xs-normal",
-        lineGap: 24,
-      },
-
-      {
-        type: "paraTitle",
-        text: "Myth #1: All Air Purifiers Work the Same Way",
-        style: "font-lg-medium",
-        lineGap: 12,
+        paraText:
+          "Air purifiers have become more popular as people learn about the importance of indoor air quality. However, misconceptions about their effectiveness and functions abound. Here’s a closer look at common myths surrounding air purifiers and what the science actually says.",
       },
       {
-        type: "paraText",
-        text: "Not all air purifiers are equal. There are multiple types, including HEPA filters, activated carbon filters, and UV purifiers, each targeting different pollutants. The Xiaomi Air Purifier 4 uses a HEPA and activated carbon combination to capture particles, VOCs, and odors, making it suitable for various indoor pollutants (U.S. Environmental Protection Agency, source: https://www.epa.gov/indoor-air-quality-iaq/types-air-cleaners).",
-        style: "font-xs-normal",
-        lineGap: 24,
-      },
-
-      {
-        type: "paraTitle",
-        text: "Myth #2: Air Purifiers Remove All Indoor Pollutants",
-        style: "font-lg-medium",
-        lineGap: 12,
+        paraTitle: "Myth #1: All Air Purifiers Work the Same Way",
+        paraText:
+          "Not all air purifiers are equal. There are multiple types, including HEPA filters, activated carbon filters, and UV purifiers, each targeting different pollutants. The Xiaomi Air Purifier 4 uses a HEPA and activated carbon combination to capture particles, VOCs, and odors, making it suitable for various indoor pollutants (U.S. Environmental Protection Agency, source: https://www.epa.gov/indoor-air-quality-iaq/types-air-cleaners).",
       },
       {
-        type: "paraText",
-        text: "While air purifiers are highly effective for many airborne particles, they may not eliminate all pollutants. For example, gases from paint or chemicals require an air purifier with activated carbon filters, like the one in the Xiaomi Air Purifier 4. It’s also worth noting that proper ventilation and regular cleaning are essential for a truly clean indoor environment (Centers for Disease Control and Prevention, source: https://www.cdc.gov).",
-        style: "font-xs-normal",
-        lineGap: 24,
-      },
-
-      {
-        type: "paraTitle",
-        text: "Myth #3: Air Purifiers Are Only Necessary for Allergy Sufferers",
-        style: "font-lg-medium",
-        lineGap: 12,
+        paraTitle: "Myth #2: Air Purifiers Remove All Indoor Pollutants",
+        paraText:
+          "While air purifiers are highly effective for many airborne particles, they may not eliminate all pollutants. For example, gases from paint or chemicals require an air purifier with activated carbon filters, like the one in the Xiaomi Air Purifier 4. It’s also worth noting that proper ventilation and regular cleaning are essential for a truly clean indoor environment (Centers for Disease Control and Prevention, source: https://www.cdc.gov).",
       },
       {
-        type: "paraText",
-        text: "Even those without allergies can benefit from improved air quality. Pollutants like VOCs, dust, and pet dander affect everyone, even if symptoms aren’t immediately noticeable. Prolonged exposure to poor air quality has been linked to respiratory and cardiovascular issues over time (American Lung Association, source: https://www.lung.org).",
-        style: "font-xs-normal",
-        lineGap: 24,
-      },
-
-      {
-        type: "paraTitle",
-        text: "Myth #4: Running an Air Purifier All Day Increases Energy Costs",
-        style: "font-lg-medium",
-        lineGap: 12,
+        paraTitle:
+          "Myth #3: Air Purifiers Are Only Necessary for Allergy Sufferers",
+        paraText:
+          "Even those without allergies can benefit from improved air quality. Pollutants like VOCs, dust, and pet dander affect everyone, even if symptoms aren’t immediately noticeable. Prolonged exposure to poor air quality has been linked to respiratory and cardiovascular issues over time (American Lung Association, source: https://www.lung.org).",
       },
       {
-        type: "paraText",
-        text: "Most modern air purifiers, including the Xiaomi Air Purifier 4, are energy efficient and designed to run continuously with minimal impact on energy bills. Additionally, the Xiaomi Air Purifier has an energy-saving mode, allowing for eco-friendly, cost-effective operation.",
-        style: "font-xs-normal",
-        lineGap: 24,
+        paraTitle:
+          "Myth #4: Running an Air Purifier All Day Increases Energy Costs",
+        paraText:
+          "Most modern air purifiers, including the Xiaomi Air Purifier 4, are energy efficient and designed to run continuously with minimal impact on energy bills. Additionally, the Xiaomi Air Purifier has an energy-saving mode, allowing for eco-friendly, cost-effective operation.",
       },
-
       {
-        type: "paraText",
-        text: "Understanding how air purifiers work and what they can (and can’t) do helps set realistic expectations and make the most of their capabilities. The Xiaomi Air Purifier 4’s combination of advanced filtration and smart technology makes it an effective choice for keeping indoor air clean and healthy.",
-        style: "font-xs-normal",
-        lineGap: 24,
+        paraText:
+          "Understanding how air purifiers work and what they can (and can’t) do helps set realistic expectations and make the most of their capabilities. The Xiaomi Air Purifier 4’s combination of advanced filtration and smart technology makes it an effective choice for keeping indoor air clean and healthy.",
       },
     ],
   },

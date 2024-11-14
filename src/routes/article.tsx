@@ -11,10 +11,12 @@ import { articles } from "@/data/articles";
 const Article = () => {
   const params = useParams();
   const id = params.id;
+
+  const article = articles[parseInt(id)];
   return (
     <>
       <Helmet>
-        <title>Article Title · Xiaomi</title>
+        <title>{article.title} · Xiaomi</title>
       </Helmet>
       <main className="flex flex-col gap-48">
         <Splash src={HomeSplash} alt="Xiaomi Smart Air Purifier 4">
@@ -31,15 +33,26 @@ const Article = () => {
             </div>
           </div>
         </Splash>
-        <div className="max-w-3xl px-4 md:px-16">
-          <MaskText
-            variant="header"
-            text="Introducing Smart Air Purifier 4"
-            className="mb-8"
-          />
+        {/* <div className="max-w-3xl px-4 md:px-16">
           <MaskText variant="header" text={`This is article number ${id}`} />
-        </div>
-        <div className="h-[200vh]"></div>
+        </div> */}
+        {/* <div className="h-[200vh]"></div> */}
+
+        <section className="flex flex-col px-4 py-12 md:gap-16 md:px-64 md:py-24">
+          {article.content.map((section, i) => (
+            <div key={i} className="mb-6 flex flex-col md:gap-6">
+              {/* Conditionally render paraTitle if it exists */}
+              {section.paraTitle && (
+                <MiText variant="header" className="mb-2">
+                  {section.paraTitle}
+                </MiText>
+              )}
+
+              {/* Render paraText (either as part of the section or as the conclusion) */}
+              <MiText className="text-justify">{section.paraText}</MiText>
+            </div>
+          ))}
+        </section>
       </main>
     </>
   );
