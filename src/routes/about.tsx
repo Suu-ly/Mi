@@ -87,9 +87,8 @@ const About = () => {
             <Link to="/about">Meet the Team</Link>
           </Button>
         </section>
-        {/* <div className="h-[200vh]"></div>   ??? whats this ? */}
 
-        <section className="flex flex-col gap-24 px-4 py-20 md:gap-0 md:px-16 md:py-24">
+        <section className="md:gap-30 flex flex-col gap-12 px-4 py-20 md:px-16 md:py-24">
           <div className="3xl:flex-row-reverse flex w-full flex-col-reverse justify-center gap-16 py-12 md:flex-row md:py-0">
             <div className="flex w-full flex-col items-center justify-center gap-8 md:items-start">
               <MaskText
@@ -97,7 +96,7 @@ const About = () => {
                 text="Our Mission"
                 className="mt-3 md:mt-0"
               />
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-4 text-justify">
                 <MiText>
                   Our mission goes beyond air purification; it’s about making a
                   positive impact on everyday lives.
@@ -115,11 +114,12 @@ const About = () => {
             </div>
             {/* <div className="h-full w-full flex-[1]"> */}
             <AspectRatio
-              ratio={2 / 1}
+              ratio={9 / 3}
               className="flex w-full items-center justify-center"
             >
               <img
-                src={isLarge ? OurMission1_cropped : OurMission1}
+                // src={isLarge ? OurMission1_cropped : OurMission1}
+                src={OurMission1}
                 alt="Our Mission"
                 className="w-full rounded-3xl"
               />
@@ -133,7 +133,7 @@ const About = () => {
                 text="We Care"
                 className="mt-3 md:mt-0"
               />
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-4 text-justify">
                 <MiText>
                   For us, clean air isn’t just a goal—it’s a shared commitment.
                 </MiText>
@@ -151,11 +151,12 @@ const About = () => {
             </div>
             {/* <div className="h-full w-full flex-[1]"> */}
             <AspectRatio
-              ratio={2 / 1}
+              ratio={9 / 3}
               className="flex w-full items-center justify-center"
             >
               <img
-                src={isLarge ? OurMission2_cropped : OurMission2}
+                // src={isLarge ? OurMission2_cropped : OurMission2}
+                src={OurMission2}
                 alt="We Care"
                 className="w-full rounded-3xl"
               />
