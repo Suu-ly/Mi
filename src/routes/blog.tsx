@@ -1,20 +1,14 @@
+import FadeIn from "@/components/fadein";
 import MaskText from "@/components/maskText";
 import Splash from "@/components/splash";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Button from "@/components/ui/button";
 import MiText from "@/components/ui/miText";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import HomeSplash from "../assets/home/home_splash.png";
-import FadeIn from "@/components/fadein";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 import { articles } from "@/data/articles";
-import Article1 from "../assets/blog/article1.png";
-import Article2 from "../assets/blog/article2.png";
-import Article3 from "../assets/blog/article3.png";
-import Article4 from "../assets/blog/article4.png";
-import Article5 from "../assets/blog/article5.png";
-import Article6 from "../assets/blog/article6.jpeg";
 
 const Blog = () => {
   const article = articles[0]; // Replace with your logic to select an article
@@ -62,7 +56,7 @@ const Blog = () => {
             className={`mb-8`}
           />
           <FadeIn>
-            <div className="mb-16 grid w-full grid-cols-1 gap-16 md:grid-cols-3 md:gap-8">
+            <div className="mb-16 grid w-full grid-cols-1 gap-16 sm:grid-cols-2 md:gap-8 lg:grid-cols-3">
               {articles.map((article, index) => (
                 <div key={index}>
                   <Link to={`/article/${index}`}>
