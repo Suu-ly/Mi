@@ -1,3 +1,5 @@
+import { motion, useInView, Variants } from "framer-motion";
+import { useRef } from "react";
 import { Link, LinkProps } from "react-router-dom";
 
 type FooterLinkProps = LinkProps & {
@@ -16,6 +18,34 @@ const FooterLink = ({ to, children }: FooterLinkProps) => {
 };
 
 const Footer = () => {
+  const footerRef = useRef(null);
+  const inView = useInView(footerRef, {
+    once: true,
+    margin: "0px 0px -5% 0px",
+  });
+  const itemVariants: Variants = {
+    isHidden: {
+      opacity: 0,
+      y: 40,
+    },
+    isInView: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.75,
+        ease: [0.33, 1, 0.68, 1],
+      },
+    },
+  };
+  const parentVariants: Variants = {
+    isInView: {
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const animate = inView ? "isInView" : "isHidden";
   return (
     <footer className="mt-32 px-4 py-6 md:mt-48 md:p-16 md:pb-8">
       <div className="mb-16 flex flex-col justify-between gap-32 md:mb-32 md:flex-row">
@@ -44,75 +74,101 @@ const Footer = () => {
             </defs>
           </svg>
         </Link>
-        <div className="flex flex-1 flex-wrap gap-12 md:max-w-2xl">
-          <nav className="flex-1">
-            <p className="mb-4 text-lg text-slate-500">Navigation</p>
+        <div
+          className="flex flex-1 flex-wrap gap-12 md:max-w-2xl"
+          ref={footerRef}
+        >
+          <motion.nav
+            className="flex-1"
+            animate={animate}
+            variants={parentVariants}
+          >
+            <motion.p
+              className="mb-4 text-lg text-slate-500"
+              variants={itemVariants}
+            >
+              Navigation
+            </motion.p>
             <ul className="flex flex-col items-start gap-2">
-              <li>
+              <motion.li variants={itemVariants}>
                 <FooterLink to="/">Home</FooterLink>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li variants={itemVariants}>
                 <FooterLink to="/product">Product</FooterLink>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li variants={itemVariants}>
                 <FooterLink to="/about">About</FooterLink>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li variants={itemVariants}>
                 <FooterLink to="/sustainability">Sustainability</FooterLink>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li variants={itemVariants}>
                 <FooterLink to="/blog">Articles</FooterLink>
-              </li>
+              </motion.li>
             </ul>
-          </nav>
-          <nav className="flex-1">
-            <p className="mb-4 text-lg text-slate-500">Support</p>
+          </motion.nav>
+          <motion.nav
+            className="flex-1"
+            animate={animate}
+            variants={parentVariants}
+          >
+            <motion.p
+              className="mb-4 text-lg text-slate-500"
+              variants={itemVariants}
+            >
+              Support
+            </motion.p>
             <ul className="flex flex-col items-start gap-2">
-              <li>
+              <motion.li variants={itemVariants}>
                 <FooterLink to="/support">Contact</FooterLink>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li variants={itemVariants}>
                 <FooterLink to="/guide">User Guide</FooterLink>
-              </li>
+              </motion.li>
             </ul>
-          </nav>
-          <nav>
-            <p className="mb-4 text-lg text-slate-500">Socials</p>
+          </motion.nav>
+          <motion.nav animate={animate} variants={parentVariants}>
+            <motion.p
+              className="mb-4 text-lg text-slate-500"
+              variants={itemVariants}
+            >
+              Socials
+            </motion.p>
             <ul className="flex flex-col items-start gap-2">
-              <li>
+              <motion.li variants={itemVariants}>
                 <FooterLink
                   to="https://www.instagram.com/xiaomi.singapore/?hl=en"
                   target="_blank"
                 >
                   Instagram
                 </FooterLink>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li variants={itemVariants}>
                 <FooterLink
                   to="https://www.facebook.com/XiaomiSingapore/"
                   target="_blank"
                 >
                   Facebook
                 </FooterLink>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li variants={itemVariants}>
                 <FooterLink
                   to="https://x.com/xiaomisingapore?lang=en"
                   target="_blank"
                 >
                   X
                 </FooterLink>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li variants={itemVariants}>
                 <FooterLink
                   to="https://www.youtube.com/channel/UCqfpRyxjui3YDP0PBhkR-NA"
                   target="_blank"
                 >
                   Youtube
                 </FooterLink>
-              </li>
+              </motion.li>
             </ul>
-          </nav>
+          </motion.nav>
         </div>
       </div>
       <div className="flex flex-col justify-normal gap-4 md:flex-row md:justify-between">
