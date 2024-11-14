@@ -6,6 +6,8 @@ import { Helmet } from "react-helmet-async";
 import { Link, useParams } from "react-router-dom";
 import HomeSplash from "../assets/home/home_splash.png";
 
+import { articles } from "@/data/articles";
+
 const Article = () => {
   const params = useParams();
   const id = params.id;

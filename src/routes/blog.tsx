@@ -5,8 +5,19 @@ import MiText from "@/components/ui/miText";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import HomeSplash from "../assets/home/home_splash.png";
+import FadeIn from "@/components/fadein";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+
+import { articles } from "@/data/articles";
+import Article1 from "../assets/blog/article1.png";
+import Article2 from "../assets/blog/article2.png";
+import Article3 from "../assets/blog/article3.png";
+import Article4 from "../assets/blog/article4.png";
+import Article5 from "../assets/blog/article5.png";
+import Article6 from "../assets/blog/article6.jpeg";
 
 const Blog = () => {
+  const article = articles[0]; // Replace with your logic to select an article
   return (
     <>
       <Helmet>
@@ -39,6 +50,43 @@ const Blog = () => {
           </MiText>
         </div>
         <div className="h-[200vh]"></div>
+
+        <section className="mb-48 flex flex-col items-center px-4 md:px-16">
+          <MaskText
+            variant="header"
+            text="Latest Articles"
+            className={`mb-8`}
+          />
+          <FadeIn>
+            <MiText className={`mb-16 text-center`}>
+              Receive the following when you order now
+            </MiText>
+          </FadeIn>
+          {/* <FadeIn>
+            <div className="mb-16 grid w-full grid-cols-1 gap-16 md:grid-cols-3 md:gap-8">
+              {articles.map((article, index) => (
+                <div key={promo.title}>
+                  <AspectRatio ratio={3 / 2} className="mb-6">
+                    <img
+                      src={promo.pic}
+                      alt={promo.title}
+                      className="size-full rounded-3xl object-cover"
+                    />
+                  </AspectRatio>
+                  <h6 className={`mb-2 font-display text-2xl font-semibold`}>
+                    {promo.title}
+                  </h6>
+                  <p>{promo.body}</p>
+                </div>
+              ))}
+            </div>
+          </FadeIn> */}
+          <FadeIn>
+            <Button asChild>
+              <Link to="/order">Order now</Link>
+            </Button>
+          </FadeIn>
+        </section>
       </main>
     </>
   );
