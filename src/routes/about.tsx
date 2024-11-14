@@ -17,9 +17,9 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import AboutSplash from "../assets/about/about_splash.jpg";
 import AboutSplashCrop from "../assets/about/about_splash_crop.png";
-import OurMission1_cropped from "../assets/about/ourmission1_cropped.jpg";
+// import OurMission1_cropped from "../assets/about/ourmission1_cropped.jpg";
 import OurMission1 from "../assets/about/ourmission1.jpg";
-import OurMission2_cropped from "../assets/about/ourmission2_cropped.jpeg";
+// import OurMission2_cropped from "../assets/about/ourmission2_cropped.jpeg";
 import OurMission2 from "../assets/about/ourmission2.jpeg";
 
 import Ryan from "../assets/about/ryan.jpg";
