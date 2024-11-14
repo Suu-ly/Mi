@@ -9,7 +9,11 @@ type MaskTextProps = textProps & {
 const MaskText = ({ text, ...rest }: MaskTextProps) => {
   const body = useRef(null);
 
-  const isInView = useInView(body, { once: true, amount: "some" });
+  const isInView = useInView(body, {
+    once: true,
+    amount: "some",
+    margin: "0px 0px -5% 0px",
+  });
 
   const phrases = text.split(" ");
 

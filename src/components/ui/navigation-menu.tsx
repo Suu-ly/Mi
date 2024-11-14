@@ -59,15 +59,10 @@ const NavigationMenuTrigger = React.forwardRef<
       height="20"
       viewBox="0 0 20 20"
       xmlns="http://www.w3.org/2000/svg"
-      className="relative top-px ml-1 transition duration-300 group-data-[state=open]:rotate-180"
+      className="transition duration-300 group-data-[state=open]:rotate-180"
       aria-hidden="true"
     >
-      <g id="expand_more">
-        <path
-          id="Vector"
-          d="M13.825 6.9126L10 10.7293L6.175 6.9126L5 8.0876L10 13.0876L15 8.0876L13.825 6.9126Z"
-        />
-      </g>
+      <path d="M13.825 6.9126L10 10.7293L6.175 6.9126L5 8.0876L10 13.0876L15 8.0876L13.825 6.9126Z" />
     </svg>
   </NavigationMenuPrimitive.Trigger>
 ));
