@@ -28,7 +28,7 @@ const carouselSlides = [
   {
     image: ESG,
     header:
-      "Xiaomi Corporation 2023 Environmental, Social, and Governance （ESG） Report",
+      "Xiaomi Corporation 2023 Environmental, Social, and Governance (ESG) Report",
     description:
       "Xiaomi Group sees sustainable development as a multidimensional system, integrating innovation, environmental and social responsibility, and efficient governance.",
   },
@@ -76,7 +76,7 @@ const Sustainability = () => {
             className="mb-8 text-emerald-600"
           />
           <MiText>
-            At Xiaomi, we’re committed to clean air and a healthy planet. Our
+            At Xiaomi, we're committed to clean air and a healthy planet. Our
             mission is to improve indoor air quality with products designed for
             sustainability, using eco-friendly materials and energy-efficient
             designs every step of the way.

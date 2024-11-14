@@ -1,6 +1,7 @@
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { motion, Variants } from "framer-motion";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Button from "./ui/button";
 import {
   NavigationMenu,
@@ -27,7 +28,9 @@ const HeaderLink = ({ to, children }: HeaderLinkProps) => {
 };
 
 const Header = () => {
+  const location = useLocation();
   const [open, setOpen] = useState(false);
+  const isMedium = useMediaQuery("(min-width: 768px)");
   const anim = {
     initial: {
       rotate: "-30deg",
@@ -53,8 +56,12 @@ const Header = () => {
     },
   };
 
+  useEffect(() => {
+    setOpen(false);
+  }, [location.pathname]);
+
   return (
-    <header className="pointer-events-none fixed inset-x-0 top-0 z-50 p-6">
+    <header className="pointer-events-none fixed inset-x-0 top-0 z-50 px-4 py-6 md:px-6">
       <div className="flex justify-between">
         <Link
           to="/"
@@ -200,13 +207,7 @@ const Header = () => {
         }}
       >
         <motion.ul
-          initial={{
-            top: 24,
-            right: 24,
-            width: 176,
-            height: 56,
-            borderRadius: 28,
-          }}
+          initial={false}
           animate={
             open
               ? {
@@ -222,7 +223,7 @@ const Header = () => {
                 }
               : {
                   top: 24,
-                  right: 24,
+                  right: isMedium ? 24 : 16,
                   width: 176,
                   height: 56,
                   borderRadius: 28,
