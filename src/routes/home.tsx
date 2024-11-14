@@ -55,6 +55,7 @@ import Delivery from "../assets/home/delivery_deal.jpg";
 import Filter from "../assets/home/filter_deal.png";
 import Warranty from "../assets/home/warranty_deal.png";
 
+import FadeIn from "@/components/fadein";
 import CallToAction from "../assets/home/call_to_action.png";
 
 const keyFeatures = [
@@ -205,20 +206,24 @@ const Home = () => {
           src={isLarge ? HomeSplash : HomeSplashCrop}
           alt="Xiaomi Smart Air Purifier 4"
         >
-          <div className="flex size-full justify-end px-4 py-12 md:items-end md:px-16 md:py-32">
+          <div className="flex size-full flex-col items-end justify-between gap-8 px-4 pb-16 pt-[104px] md:justify-end md:px-16 md:py-32">
             <div className="flex max-w-lg flex-col items-end gap-8 text-right">
               <MaskText
                 variant="splash"
                 text="Breathe easy, we make sure you can"
               />
-              <MiText className="font-medium text-slate-800">
-                Meet Xiaomi Smart Air Purifier 4, your new best friend for
-                cleaner, fresher air at home
-              </MiText>
+              <FadeIn>
+                <MiText className="font-medium text-slate-800">
+                  Meet Xiaomi Smart Air Purifier 4, your new best friend for
+                  cleaner, fresher air at home
+                </MiText>
+              </FadeIn>
+            </div>
+            <FadeIn>
               <Button asChild>
                 <Link to="/product">Discover More</Link>
               </Button>
-            </div>
+            </FadeIn>
           </div>
         </Splash>
         <section className="mb-48 h-[250vh]" ref={couchRef}>
@@ -277,10 +282,12 @@ const Home = () => {
                 text="Introducing Smart Air Purifier 4"
                 className="mb-8"
               />
-              <MiText>
-                Designed to tackle indoor air pollution head-on and ensure that
-                every breath you take is pure and healthy.
-              </MiText>
+              <FadeIn>
+                <MiText>
+                  Designed to tackle indoor air pollution head-on and ensure
+                  that every breath you take is pure and healthy.
+                </MiText>
+              </FadeIn>
             </div>
           </div>
           <motion.div
@@ -351,10 +358,12 @@ const Home = () => {
                 text="Shhh... no more noise."
                 className="mb-8 text-slate-50"
               />
-              <MiText className="text-slate-200">
-                Traditional air purifiers can be loud and disruptive. <br />
-                This one isn't.
-              </MiText>
+              <FadeIn>
+                <MiText className="text-slate-200">
+                  Traditional air purifiers can be loud and disruptive. <br />
+                  This one isn't.
+                </MiText>
+              </FadeIn>
             </div>
             <Parallax
               src={isLarge ? Night : NightCrop}
@@ -369,17 +378,21 @@ const Home = () => {
                 text="Good for you, good for the planet"
                 className={`transition-colors duration-500 ${flipped ? "text-slate-50" : ""}`}
               />
-              <MiText
-                className={`transition-colors duration-500 ${flipped ? "text-slate-200" : ""}`}
-              >
-                it's not enough to merely aspire to eco-friendly ideals. We need
-                tangible actions to tackle root causes of environmental
-                challenges. That's why we're committed to sustainability as a
-                core value.
-              </MiText>
-              <Button asChild>
-                <Link to="/sustainability">Find out more</Link>
-              </Button>
+              <FadeIn>
+                <MiText
+                  className={`transition-colors duration-500 ${flipped ? "text-slate-200" : ""}`}
+                >
+                  it's not enough to merely aspire to eco-friendly ideals. We
+                  need tangible actions to tackle root causes of environmental
+                  challenges. That's why we're committed to sustainability as a
+                  core value.
+                </MiText>
+              </FadeIn>
+              <FadeIn>
+                <Button asChild>
+                  <Link to="/sustainability">Find out more</Link>
+                </Button>
+              </FadeIn>
             </div>
             <div className="aspect-[3/4] max-h-[75vh] w-full min-w-60 flex-[2]">
               <img
@@ -411,31 +424,33 @@ const Home = () => {
                 className={`transition-colors duration-500 sm:order-2 sm:text-right ${flipped ? "text-slate-50" : ""}`}
               />
             </div>
-            <CarouselContent className="-ml-8">
-              {reviews.map((review) => (
-                <CarouselItem
-                  className="basis-full pl-8 sm:basis-8/12 lg:basis-1/3 2xl:basis-1/4"
-                  key={review.name}
-                >
-                  <div className="flex h-full flex-col justify-between gap-6 rounded-3xl bg-white p-4 md:p-6">
-                    <div>
-                      <h6 className="mb-3 font-display text-lg font-medium text-slate-900">
-                        {review.title}
-                      </h6>
-                      <p className="text-slate-700">{review.body}</p>
+            <FadeIn>
+              <CarouselContent className="-ml-8">
+                {reviews.map((review) => (
+                  <CarouselItem
+                    className="basis-full pl-8 sm:basis-8/12 lg:basis-1/3 2xl:basis-1/4"
+                    key={review.name}
+                  >
+                    <div className="flex h-full flex-col justify-between gap-6 rounded-3xl bg-white p-4 md:p-6">
+                      <div>
+                        <h6 className="mb-3 font-display text-lg font-medium text-slate-900">
+                          {review.title}
+                        </h6>
+                        <p className="text-slate-700">{review.body}</p>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <img
+                          src={review.pic}
+                          alt={review.name}
+                          className="size-12 rounded-full object-cover"
+                        />
+                        <span className="font-semibold">{review.name}</span>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <img
-                        src={review.pic}
-                        alt={review.name}
-                        className="size-12 rounded-full object-cover"
-                      />
-                      <span className="font-semibold">{review.name}</span>
-                    </div>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </FadeIn>
           </Carousel>
         </section>
         <section className="mb-48 flex flex-col items-center px-4 md:px-16">
@@ -444,40 +459,46 @@ const Home = () => {
             text="For a limited time"
             className={`mb-8 text-center transition-colors duration-500 ${flipped ? "text-slate-50" : ""}`}
           />
-          <MiText
-            className={`mb-16 text-center transition-colors duration-500 ${flipped ? "text-slate-200" : ""}`}
-          >
-            Receive the following when you order now
-          </MiText>
-          <div className="mb-16 grid w-full grid-cols-1 gap-16 md:grid-cols-3 md:gap-8">
-            {promotion.map((promo) => (
-              <div key={promo.title}>
-                <AspectRatio ratio={3 / 2} className="mb-6">
-                  <img
-                    src={promo.pic}
-                    alt={promo.title}
-                    className="size-full rounded-3xl object-cover"
-                  />
-                </AspectRatio>
-                <h6
-                  className={`mb-2 font-display text-2xl font-semibold transition-colors duration-500 ${flipped ? "text-slate-50" : "text-slate-900"}`}
-                >
-                  {promo.title}
-                </h6>
-                <p
-                  className={cn(
-                    "transition-colors duration-500",
-                    flipped ? "text-slate-200" : "text-slate-700",
-                  )}
-                >
-                  {promo.body}
-                </p>
-              </div>
-            ))}
-          </div>
-          <Button asChild>
-            <Link to="/order">Order now</Link>
-          </Button>
+          <FadeIn>
+            <MiText
+              className={`mb-16 text-center transition-colors duration-500 ${flipped ? "text-slate-200" : ""}`}
+            >
+              Receive the following when you order now
+            </MiText>
+          </FadeIn>
+          <FadeIn>
+            <div className="mb-16 grid w-full grid-cols-1 gap-16 md:grid-cols-3 md:gap-8">
+              {promotion.map((promo) => (
+                <div key={promo.title}>
+                  <AspectRatio ratio={3 / 2} className="mb-6">
+                    <img
+                      src={promo.pic}
+                      alt={promo.title}
+                      className="size-full rounded-3xl object-cover"
+                    />
+                  </AspectRatio>
+                  <h6
+                    className={`mb-2 font-display text-2xl font-semibold transition-colors duration-500 ${flipped ? "text-slate-50" : "text-slate-900"}`}
+                  >
+                    {promo.title}
+                  </h6>
+                  <p
+                    className={cn(
+                      "transition-colors duration-500",
+                      flipped ? "text-slate-200" : "text-slate-700",
+                    )}
+                  >
+                    {promo.body}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </FadeIn>
+          <FadeIn>
+            <Button asChild>
+              <Link to="/order">Order now</Link>
+            </Button>
+          </FadeIn>
         </section>
         <section className="mb-48 flex flex-col gap-8 overflow-hidden px-4 md:gap-16 md:px-16">
           <div className="flex justify-between">
@@ -503,40 +524,42 @@ const Home = () => {
               },
             }}
           >
-            <CarouselContent className="-ml-8">
-              {articles.slice(0, 3).map((article, index) => (
-                <CarouselItem
-                  className="basis-10/12 pl-8 sm:basis-2/3 lg:basis-1/3"
-                  key={article.title}
-                >
-                  <Link
-                    to={`/article/${index}`}
-                    className="group flex size-full flex-col gap-3 rounded-3xl bg-white p-4 md:p-6"
+            <FadeIn>
+              <CarouselContent className="-ml-8">
+                {articles.slice(0, 3).map((article, index) => (
+                  <CarouselItem
+                    className="basis-10/12 pl-8 sm:basis-2/3 lg:basis-1/3"
+                    key={article.title}
                   >
-                    <AspectRatio
-                      ratio={3 / 2}
-                      className="overflow-hidden rounded-2xl"
+                    <Link
+                      to={`/article/${index}`}
+                      className="group flex size-full flex-col gap-3 rounded-3xl bg-white p-4 md:p-6"
                     >
-                      <img
-                        src={article.pic}
-                        alt={article.title}
-                        className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                    </AspectRatio>
-                    <h6
-                      className={`font-display text-lg font-medium transition-colors duration-500 ${flipped ? "text-slate-50" : "text-slate-900"} lg:text-2xl`}
-                    >
-                      {article.title}
-                    </h6>
-                    <p
-                      className={`transition-colors duration-500 ${flipped ? "text-slate-200" : "text-slate-700"}`}
-                    >
-                      {article.date}
-                    </p>
-                  </Link>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
+                      <AspectRatio
+                        ratio={3 / 2}
+                        className="overflow-hidden rounded-2xl"
+                      >
+                        <img
+                          src={article.pic}
+                          alt={article.title}
+                          className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      </AspectRatio>
+                      <h6
+                        className={`font-display text-lg font-medium transition-colors duration-500 ${flipped ? "text-slate-50" : "text-slate-900"} lg:text-2xl`}
+                      >
+                        {article.title}
+                      </h6>
+                      <p
+                        className={`transition-colors duration-500 ${flipped ? "text-slate-200" : "text-slate-700"}`}
+                      >
+                        {article.date}
+                      </p>
+                    </Link>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </FadeIn>
           </Carousel>
           <div className="flex justify-center md:hidden">
             <Button asChild variant="outline">

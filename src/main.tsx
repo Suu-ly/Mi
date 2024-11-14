@@ -6,6 +6,9 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App.tsx";
 import Footer from "./components/footer.tsx";
 import Header from "./components/header.tsx";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+import "react-material-symbols/rounded";
 import "./index.css";
 
 createRoot(document.getElementById("root")!).render(

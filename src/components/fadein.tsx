@@ -6,7 +6,7 @@ type FadeInProps = MotionProps & HTMLAttributes<HTMLDivElement>;
 const FadeIn = ({ children, ...rest }: FadeInProps) => {
   return (
     <motion.div
-      viewport={{ once: true, amount: "some" }}
+      viewport={{ once: true, amount: "some", margin: "0px 0px -5% 0px" }}
       initial={{ opacity: 0, y: 40 }}
       whileInView={{
         opacity: 1,
