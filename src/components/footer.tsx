@@ -6,11 +6,12 @@ type FooterLinkProps = LinkProps & {
   to: string;
 };
 
-const FooterLink = ({ to, children }: FooterLinkProps) => {
+const FooterLink = ({ to, children, ...rest }: FooterLinkProps) => {
   return (
     <Link
       className="relative whitespace-nowrap text-xl font-medium text-slate-700 transition-colors before:absolute before:left-0 before:top-full before:block before:h-0.5 before:w-full before:origin-bottom-left before:scale-x-0 before:bg-slate-900 before:transition-transform before:ease-out hover:text-slate-900 hover:before:scale-x-100"
       to={to}
+      {...rest}
     >
       {children}
     </Link>
@@ -139,6 +140,7 @@ const Footer = () => {
                 <FooterLink
                   to="https://www.instagram.com/xiaomi.singapore/?hl=en"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Instagram
                 </FooterLink>
@@ -147,6 +149,7 @@ const Footer = () => {
                 <FooterLink
                   to="https://www.facebook.com/XiaomiSingapore/"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Facebook
                 </FooterLink>
@@ -155,6 +158,7 @@ const Footer = () => {
                 <FooterLink
                   to="https://x.com/xiaomisingapore?lang=en"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   X
                 </FooterLink>
@@ -163,6 +167,7 @@ const Footer = () => {
                 <FooterLink
                   to="https://www.youtube.com/channel/UCqfpRyxjui3YDP0PBhkR-NA"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Youtube
                 </FooterLink>
