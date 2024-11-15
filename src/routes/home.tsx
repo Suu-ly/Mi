@@ -308,7 +308,7 @@ const Home = () => {
               <MaskText variant="header" text="All the features you need." />
             </div>
             <motion.div
-              className={`relative flex flex-col gap-16 p-4 transition-colors duration-500 md:left-full md:h-screen md:min-w-max md:flex-row md:items-center md:pl-0 md:pr-16 ${flipped ? "bg-stone-900" : "bg-stone-50"}`}
+              className={`relative flex flex-col gap-20 px-4 transition-colors duration-500 md:left-full md:h-screen md:min-w-max md:flex-row md:items-center md:gap-16 md:pl-0 md:pr-16 md:pt-[104px] ${flipped ? "bg-stone-900" : "bg-stone-50"}`}
               style={isLarge ? { x } : undefined}
             >
               {keyFeatures.map((feature) => (
@@ -466,8 +466,8 @@ const Home = () => {
               Receive the following when you order now
             </MiText>
           </FadeIn>
-          <FadeIn>
-            <div className="mb-16 grid w-full grid-cols-1 gap-16 md:grid-cols-3 md:gap-8">
+          <FadeIn className="w-full">
+            <div className="mb-16 grid w-full grid-cols-1 gap-20 md:grid-cols-3 md:gap-8">
               {promotion.map((promo) => (
                 <div key={promo.title}>
                   <AspectRatio ratio={3 / 2} className="mb-6">
