@@ -4,7 +4,6 @@ import Article3 from "../assets/articles/article3.png";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type ArticleType = { title: string; date: string; pic: string; content: any }[];
-
 // Please sort the list of articles to most recent first!
 export const articles: ArticleType = [
   {

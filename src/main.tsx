@@ -10,7 +10,7 @@ import "./index.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <HelmetProvider>
         <ReactLenis root options={{ duration: 0.8 }}>
           <Header />
