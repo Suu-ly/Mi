@@ -4,10 +4,12 @@ import Button from "@/components/ui/button";
 import MiText from "@/components/ui/miText";
 import { Helmet } from "react-helmet-async";
 import { Link, useParams } from "react-router-dom";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 import { articles } from "@/data/articles";
 
 const Article = () => {
+  const isLarge = useMediaQuery("(min-width: 768px)");
   const params = useParams();
   const id = params.id;
 
@@ -18,9 +20,20 @@ const Article = () => {
         <title>{article.title} · Xiaomi</title>
       </Helmet>
       <main className="flex flex-col gap-20 md:gap-48">
-        <Splash src={article.pic} alt="Xiaomi Smart Air Purifier 4">
+        <Splash
+          src={
+            isLarge
+              ? article.pic
+              : article.pic_cropped
+                ? article.pic_cropped
+                : article.pic
+          }
+          alt="Xiaomi Smart Air Purifier 4"
+        >
           <div className="justify-centre flex min-h-svh w-full items-end px-4 py-12 sm:px-48 md:gap-16 md:px-48 md:py-24 lg:px-64 2xl:px-96">
-            <div className="flex flex-col items-start gap-8 text-left">
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 z-10 rounded-3xl bg-gradient-to-b from-white/0 to-black/30"></div>
+            <div className="relative z-20 flex flex-col items-start gap-8 text-left">
               <MaskText
                 variant="splash"
                 text={article.title}

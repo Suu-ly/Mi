@@ -2,13 +2,17 @@ import Article1 from "../assets/articles/article1.png";
 import Article2 from "../assets/articles/article2.png";
 import Article3 from "../assets/articles/article3.png";
 import Article4 from "../assets/articles/article4.png";
+import Article4_cropped from "../assets/articles/article4_cropped.png";
 import Article5 from "../assets/articles/article5.png";
 import Article6 from "../assets/articles/article6.jpeg";
+import Article6_cropped from "../assets/articles/article6_cropped.jpeg";
+
 
 type ArticleType = {
   title: string;
   date: string;
   pic: string;
+  pic_cropped?: string;
   content: {
     body: { paraTitle?: string; paraText: string; paraText2?: string; paraText3?: string; paraText4?: string; paraText5?: string }[];
     sources: { link: string; linkTitle: string; supporting: string }[];
@@ -21,6 +25,7 @@ export const articles: ArticleType = [
     title: "Air Purifier Myths Debunked: Separating Facts from Fiction",
     date: "7 Nov 2024",
     pic: Article6,
+    pic_cropped: Article6_cropped,
     content: {
       body: [
         {
@@ -164,6 +169,7 @@ export const articles: ArticleType = [
   {
     title: "Breathe Easy: The Role of Air Purifiers in Allergy Relief",
     date: "25 Oct 2024",
+    pic_cropped: Article4_cropped,
     pic: Article4,
     content: {
       body: [

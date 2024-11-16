@@ -17,10 +17,13 @@ const Blog = () => {
       <Helmet>
         <title>Blog · Xiaomi</title>
       </Helmet>
-      <main className="flex flex-col gap-48">
+      <main className="flex flex-col gap-20 md:gap-48">
         <Splash src={articles[5].pic} alt="Xiaomi Smart Air Purifier 4">
-          <div className="flex min-h-svh w-full items-start justify-end px-4 py-12 md:px-16 md:py-32">
-            <div className="flex max-w-lg flex-col items-center gap-8 rounded-2xl bg-white px-9 py-7 text-left">
+          <div className="flex min-h-svh w-full items-center justify-center px-4 py-12 pt-32 md:min-h-full md:px-16 md:py-32 lg:justify-end">
+            <div className="flex max-w-3xl flex-col items-center gap-8 rounded-2xl bg-white bg-opacity-80 px-9 py-7 text-left lg:absolute">
+              <MiText className="font-medium text-emerald-600">
+                Featured Read
+              </MiText>
               <MaskText variant="splash" text={articles[5].title} />
               <p className="flex w-full items-start">{articles[5].date}</p>
               <MiText className="font-medium text-slate-800">
@@ -29,35 +32,52 @@ const Blog = () => {
                 cleaning, discover what you need.
               </MiText>
               <Button asChild className="flex items-center">
-                <Link to="/product">Discover More</Link>
+                <Link to="/article/5">Read More</Link>
               </Button>
             </div>
           </div>
         </Splash>
-        <div className="max-w-3xl px-4 md:px-16">
-          <MaskText
-            variant="header"
-            text="Introducing Smart Air Purifier 4"
-            className="mb-8"
-          />
-          <MiText>
-            Designed to tackle indoor air pollution head-on and ensure that
-            every breath you take is pure and healthy.
-          </MiText>
-        </div>
-        {/* <div className="h-[200vh]"></div> */}
 
-        <section className="mb-48 flex flex-col items-start px-4 md:px-16">
+        <section className="mb-8 flex flex-col items-start px-4 md:px-16">
           <MaskText
             variant="header"
             text="Latest Articles"
-            className={`mb-8`}
+            className={`mb-16`}
+          />
+          <FadeIn>
+            <div className="grid w-full grid-cols-1 gap-16 sm:grid-cols-2 md:gap-8 lg:grid-cols-3">
+              {articles.slice(0, 4).map((article, index) => (
+                <div key={index}>
+                  <Link to={`/article/${index}`}>
+                    <AspectRatio ratio={3 / 2} className="mb-6">
+                      <img
+                        src={article.pic}
+                        alt={article.title}
+                        className="size-full rounded-3xl object-cover"
+                      />
+                    </AspectRatio>
+                    <h6 className={`mb-2 font-display text-2xl font-semibold`}>
+                      {article.title}
+                    </h6>
+                    <p>{article.date}</p>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </FadeIn>
+        </section>
+
+        <section className="flex flex-col items-start px-4 md:px-16">
+          <MaskText
+            variant="header"
+            text="Featured Reads"
+            className={`mb-16`}
           />
           <FadeIn>
             <div className="mb-16 grid w-full grid-cols-1 gap-16 sm:grid-cols-2 md:gap-8 lg:grid-cols-3">
-              {articles.map((article, index) => (
+              {articles.slice(2).map((article, index) => (
                 <div key={index}>
-                  <Link to={`/article/${index}`}>
+                  <Link to={`/article/${index + 3}`}>
                     <AspectRatio ratio={3 / 2} className="mb-6">
                       <img
                         src={article.pic}
