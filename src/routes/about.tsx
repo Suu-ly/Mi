@@ -97,7 +97,7 @@ const About = () => {
         </section>
 
         <section className="flex flex-col gap-24 bg-white px-4 py-20 md:gap-0 md:px-16 md:py-24">
-        <section className="md:gap-30 flex flex-col gap-12 px-4 py-20 md:px-16 md:py-24">
+          {/* <section className="md:gap-30 flex flex-col gap-12 px-4 py-20 md:px-16 md:py-24"> */}
           <div className="3xl:flex-row-reverse flex w-full flex-col-reverse justify-center gap-16 py-12 md:flex-row md:py-0">
             <div className="flex w-full flex-col items-center justify-center gap-8 md:items-start">
               <MaskText
