@@ -1,5 +1,6 @@
 import { AnimatePresence } from "framer-motion";
 import { Route, Routes, useLocation } from "react-router-dom";
+import Footer from "./components/footer";
 import Transition from "./components/transition";
 import About from "./routes/about";
 import Article from "./routes/article";
@@ -35,6 +36,7 @@ function App() {
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/*" element={<Error />} />
         </Routes>
+        <Footer />
       </Transition>
     </AnimatePresence>
   );

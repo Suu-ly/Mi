@@ -73,6 +73,8 @@ const Transition = ({ children }: TransitionProps) => {
       <motion.div
         {...anim(slideWhiteExit)}
         className="fixed inset-0 z-40 bg-stone-50"
+        onAnimationStart={() => Lenis?.stop()}
+        onAnimationComplete={() => Lenis?.start()}
       />
       <motion.div
         {...anim(darken)}
