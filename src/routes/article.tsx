@@ -17,40 +17,82 @@ const Article = () => {
       <Helmet>
         <title>{article.title} · Xiaomi</title>
       </Helmet>
-      <main className="flex flex-col gap-48">
-        <Splash src={HomeSplash} alt="Xiaomi Smart Air Purifier 4">
-          <div className="flex min-h-svh w-full items-end justify-end px-4 py-12 md:px-16 md:py-32">
-            <div className="flex max-w-lg flex-col items-end gap-8 text-right">
-              <MaskText variant="splash" text="Articles" />
-              <MiText className="font-medium text-slate-800">
-                Meet Xiaomi Smart Air Purifier 4, your new best friend for
-                cleaner, fresher air at home
-              </MiText>
-              <Button asChild>
-                <Link to="/product">Discover More</Link>
-              </Button>
+      <main className="flex flex-col gap-20 md:gap-48">
+        <Splash src={article.pic} alt="Xiaomi Smart Air Purifier 4">
+          <div className="justify-centre flex min-h-svh w-full items-end px-4 py-12 sm:px-48 md:gap-16 md:px-48 md:py-24 lg:px-64 2xl:px-96">
+            <div className="flex flex-col items-start gap-8 text-left">
+              <MaskText
+                variant="splash"
+                text={article.title}
+                className="text-slate-50"
+              />
+              <p className="text-slate-200">{article.date}</p>
             </div>
           </div>
         </Splash>
-        {/* <div className="max-w-3xl px-4 md:px-16">
-          <MaskText variant="header" text={`This is article number ${id}`} />
-        </div> */}
-        {/* <div className="h-[200vh]"></div> */}
 
-        <section className="flex flex-col px-4 py-12 md:gap-16 md:px-64 md:py-24">
-          {article.content.map((section, i) => (
-            <div key={i} className="mb-6 flex flex-col md:gap-6">
+        <section className="flex flex-col gap-8 px-4 py-12 sm:px-48 md:gap-16 md:px-48 md:py-24 lg:px-64 2xl:px-96">
+          {article.content.body.map((section, i) => (
+            <div key={i} className="mb-6 flex flex-col gap-4 md:gap-6">
               {/* Conditionally render paraTitle if it exists */}
               {section.paraTitle && (
-                <MiText variant="header" className="mb-2">
+                <h6 className="mb-2 font-display text-2xl font-semibold md:text-4xl">
                   {section.paraTitle}
-                </MiText>
+                </h6>
               )}
 
-              {/* Render paraText (either as part of the section or as the conclusion) */}
+              {/* Render paraText */}
               <MiText className="text-justify">{section.paraText}</MiText>
+
+              {/* Render paraText2 if exists */}
+              {section.paraText2 && (
+                <MiText className="mt-1 text-justify">
+                  {section.paraText2}
+                </MiText>
+              )}
+              {/* Render paraText3 if exists */}
+              {section.paraText3 && (
+                <MiText className="mt-1 text-justify">
+                  {section.paraText3}
+                </MiText>
+              )}
+              {/* Render paraText4 if exists */}
+              {section.paraText4 && (
+                <MiText className="mt-1 text-justify">
+                  {section.paraText4}
+                </MiText>
+              )}
+              {/* Render paraText5 if exists */}
+              {section.paraText5 && (
+                <MiText className="mt-1 text-justify">
+                  {section.paraText5}
+                </MiText>
+              )}
             </div>
           ))}
+
+          {/* Display the Sources at the end of the article */}
+          <div className="flex flex-col gap-2 md:gap-6">
+            <h6 className="mb-8 mt-12 font-display text-xl font-semibold md:mb-6 md:text-2xl">
+              Sources:
+            </h6>
+            {article.content.sources.map((source, i) => (
+              <div key={i} className="mb-6 flex flex-col md:gap-4">
+                <h6 className="font-normal text-slate-500 md:text-xl">
+                  <a
+                    href={source.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 underline hover:text-indigo-700"
+                  >
+                    {source.linkTitle}
+                  </a>
+                  <span className="mx-4">|</span>
+                  <span>{source.supporting}</span>
+                </h6>
+              </div>
+            ))}
+          </div>
         </section>
       </main>
     </>

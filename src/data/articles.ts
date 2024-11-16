@@ -10,7 +10,7 @@ type ArticleType = {
   date: string;
   pic: string;
   content: {
-    body: { paraText: string; paraTitle?: string }[];
+    body: { paraTitle?: string; paraText: string; paraText2?: string; paraText3?: string; paraText4?: string; paraText5?: string }[];
     sources: { link: string; linkTitle: string; supporting: string }[];
   };
 }[];
@@ -117,21 +117,13 @@ export const articles: ArticleType = [
         {
           paraText:
             "Filters: Look for HEPA filters to capture fine particles like those in haze, and activated carbon filters to remove odors and chemicals. Some models also include UV light to neutralize bacteria and viruses.",
-        },
-        {
-          paraText:
+          paraText2:
             "CADR (Clean Air Delivery Rate): This refers to how efficient an air purifier can pump out clean air in a room. A higher CADR means faster, more effective air purification.",
-        },
-        {
-          paraText:
+          paraText3:
             "Coverage Area: Different air purifiers can support different room sizes. Make sure the purifier’s coverage suits your room size for optimal air quality.",
-        },
-        {
-          paraText:
+          paraText4:
             "Noise Level: For quieter rooms like bedrooms, choose a model with low decibel ratings for undisturbed sleep.",
-        },
-        {
-          paraText:
+          paraText5:
             "Energy Efficiency: Opt for energy-efficient models to save on utility costs.",
         },
         {
@@ -173,13 +165,116 @@ export const articles: ArticleType = [
     title: "Breathe Easy: The Role of Air Purifiers in Allergy Relief",
     date: "25 Oct 2024",
     pic: Article4,
-    content: "",
+    content: {
+      body: [
+        {
+          paraText:
+            "Allergies can be an all-too-familiar struggle, with symptoms like sneezing, itchy eyes, and respiratory discomfort. Many allergens that trigger these reactions are right inside our homes. From pet dander to pollen and dust mites, these particles can make life uncomfortable for allergy sufferers. Fortunately, using an air purifier is one of the most effective ways to reduce allergens and breathe easier indoors.",
+        },
+        {
+          paraTitle: "How Allergens Enter and Affect Indoor Air",
+          paraText:
+            "Common allergens, including pet dander, pollen, mold spores, and dust mites, often accumulate indoors. Every time you open a window or even walk in from outside, you may unknowingly bring pollen and dust into your living space. These allergens can circulate in the air, causing symptoms ranging from mild irritation to severe respiratory distress for sensitive individuals.",
+        },
+        {
+          paraTitle: "How the Xiaomi Air Purifier 4 Helps Combat Allergens",
+          paraText:
+            "The Xiaomi Air Purifier 4 utilizes a true HEPA filter that captures particles as small as 0.3 microns, including many common allergens. This makes it a strong tool for creating a more allergy-friendly home. Its advanced filtration system can reduce airborne irritants significantly, making daily life more comfortable for allergy sufferers. With the purifier running, even high pollen season becomes more manageable.",
+        },
+        {
+          paraTitle: "Benefits of Regular Air Filtration for Allergy Sufferers",
+          paraText:
+            "Regular use of an air purifier can help minimize allergy symptoms by reducing airborne irritants, leading to better sleep, improved energy levels, and a more comfortable indoor environment overall.",
+        },
+        {
+          paraTitle: "Additional Tips for Allergy Control at Home",
+          paraText:
+            "Dust and Vacuum Regularly: Use a vacuum with a HEPA filter to trap allergens effectively.",
+          paraText2: "Wash Bedding Frequently: This helps reduce dust mites in your living space.",
+          paraText3: "Monitor Humidity Levels: Keeping humidity low discourages mold growth.",
+        },
+        {
+          paraText:
+            "A quality air purifier, like the Xiaomi Air Purifier 4, offers a straightforward solution for creating an allergen-reduced indoor environment. Paired with other healthy home habits, you can manage and even lessen allergy symptoms with ease.",
+        },
+      ],
+      sources: [
+        {
+          link: "https://www.aaaai.org/tools-for-the-public/conditions-library/allergies/indoor-allergens-ttr",
+          supporting: "American College of Allergy, Asthma & Immunology, AAAAI",
+          linkTitle: "Indoor Allergens",
+        },
+        {
+          link: "https://www.rabbitair.com/pages/air-filters-by-asthma-and-allergy-foundation-of-america",
+          supporting: "Asthma and Allergy Foundation of America, AAFA",
+          linkTitle: "Air Filters",
+        },
+        {
+          link: "https://www.eurekaforbes.com/blog/benefits-of-an-air-purifier.html",
+          supporting: "Eureka Forbes",
+          linkTitle: "7 Benefits of an Air Purifier for Improving Indoor Air Quality",
+        },
+      ],
+    },
   },
   {
     title: "Clearing the Air: Tackling Hidden Pollutants in Your Home",
     date: "4 Oct 2024",
     pic: Article1,
-    content: "",
+    content: {
+      body: [
+        {
+          paraText:
+            "When we think of pollution, we often picture smog-filled cityscapes or industrial waste. But surprisingly, some of the most harmful pollutants are right inside our homes. Invisible gases, chemical compounds, and particles accumulate in the places we live and work, creating a hidden threat to our health.",
+        },
+        {
+          paraTitle: "What Are Indoor Pollutants?",
+          paraText:
+            "Common sources include cooking fumes, household cleaners, pet dander, mold, and even materials used in furniture and paints. These sources release volatile organic compounds (VOCs) and other particles that worsen indoor air quality. Formaldehyde from furniture, benzene from paint, and pollen from the outdoors can all contribute to an unhealthy indoor environment.",
+        },
+        {
+          paraTitle: "Health Effects of Indoor Pollutants",
+          paraText:
+            "Poor indoor air quality is linked to respiratory issues, allergies, and even chronic conditions like asthma. The World Health Organization highlights indoor air pollution as a leading cause of health problems globally.",
+          paraText2: "Symptoms from exposure can include headaches, fatigue, and eye irritation, often going unnoticed but building up over time.",
+        },
+        {
+          paraTitle: "Using the Smart Air Purifier 4 to Combat Indoor Pollutants",
+          paraText:
+            "The Xiaomi Smart Air Purifier 4 tackles these issues head-on. Designed to capture even the smallest airborne particles, it uses advanced HEPA filtration to clean the air and neutralize pollutants. Whether it’s reducing allergens or removing VOCs, this purifier is an essential tool in maintaining a healthy home environment.",
+        },
+        {
+          paraTitle: "Additional Tips for Improving Indoor Air Quality",
+          paraText:
+            "Ventilate Regularly: Open windows whenever possible to let fresh air circulate.",
+          paraText2:
+            "Use Natural Cleaning Products: Opt for non-toxic, eco-friendly cleaning solutions.",
+          paraText3:
+            "Invest in an Air Purifier: Devices like the Xiaomi Smart Air Purifier 4 actively remove pollutants from the air, providing clean, fresh air around the clock.",
+        },
+        {
+          paraText:
+            "Taking these steps can significantly improve your indoor environment and reduce health risks associated with poor air quality.",
+        },
+      ],
+      sources: [
+        {
+          link: "https://www.epa.gov/indoor-air-quality-iaq",
+          supporting: "U.S. Environmental Protection Agency, US EPA",
+          linkTitle: "Indoor Air Quality",
+        },
+        {
+          link: "https://www.who.int/health-topics/air-pollution#tab=tab_2",
+          supporting: "World Health Organization, WHO",
+          linkTitle: "Air Pollution",
+        },
+        {
+          link: "https://www.mayoclinic.org/healthy-lifestyle/pregnancy-week-by-week/in-depth/pregnancy/art-20046767",
+          supporting: "Mayo Clinic",
+          linkTitle: "Healthy Home Tips",
+        },
+      ],
+    },
   },
   {
     title: "Green from the Ground Up: Innovations in Sustainable Manufacturing",
@@ -236,6 +331,64 @@ export const articles: ArticleType = [
       "Home Essentials: Must-Have Items for a Healthier, Happier Living Space",
     date: "12 Aug 2024",
     pic: Article3,
-    content: "",
+    content: {
+      body: [
+        {
+          paraText:
+            "Creating a home that supports health and happiness goes beyond aesthetics. It’s about cultivating an environment that nurtures wellness. Here are some must-have items that make a big difference in indoor quality of life.",
+        },
+        {
+          paraTitle: "1. A Reliable Air Purifier",
+          paraText:
+            "Top of the list is an air purifier like the Xiaomi Smart Air Purifier 4. Indoor air can be laden with dust, allergens, and unseen particles. An air purifier cleanses the air, making it safer to breathe, especially for those with allergies or respiratory concerns. The Smart Air Purifier 4’s HEPA filtration system captures up to 99.97% of airborne particles, ensuring cleaner, healthier air in your living space.",
+        },
+        {
+          paraTitle: "2. Indoor Plants for Natural Freshness",
+          paraText:
+            "Plants like spider plants, snake plants, and peace lilies can add natural beauty while slightly enhancing air quality. While their impact isn’t as strong as an air purifier, they bring life and vibrancy into any room.",
+        },
+        {
+          paraTitle: "3. Non-Toxic Cleaning Supplies",
+          paraText:
+            "Many commercial cleaners release harmful VOCs that affect air quality. Opt for natural, non-toxic cleaning products to reduce your exposure to these chemicals. Look for products that are fragrance-free, biodegradable, and eco-friendly.",
+        },
+        {
+          paraTitle: "4. Humidifier for Added Comfort",
+          paraText:
+            "During dry months, a humidifier can help maintain optimal moisture levels, preventing dry skin and respiratory irritation. Paired with an air purifier, it’s an excellent way to create a balanced and comfortable atmosphere.",
+        },
+        {
+          paraTitle: "5. Essential Oil Diffuser for Relaxation",
+          paraText:
+            "Aromatherapy can be calming, and using essential oils with properties like eucalyptus and lavender promotes relaxation. Just be cautious with oils if you have sensitive airways or allergies.",
+        },
+        {
+          paraText:
+            "Building a healthy living space is all about mindful choices. With essentials like air purifiers and natural cleaning supplies, you’re well on your way to a home that supports your well-being every day.",
+        },
+      ],
+      sources: [
+        {
+          link: "https://www.lung.org/clean-air/indoor-air/indoor-air-pollutants",
+          supporting: "American Lung Association",
+          linkTitle: "Air Purifiers and Indoor Air Quality",
+        },
+        {
+          link: "https://ntrs.nasa.gov/citations/19930073077",
+          supporting: "NASA Clean Air Study",
+          linkTitle: "Plants and Air Quality",
+        },
+        {
+          link: "https://www.ewg.org/cleaners/",
+          supporting: "U.S. Department of Energy",
+          linkTitle: "Energy-Saving Tech in Appliances",
+        },
+        {
+          link: "https://www.mayoclinic.org/diseases-conditions/common-cold/in-depth/humidifiers/art-20048021",
+          supporting: "Mayo Clinic",
+          linkTitle: "Humidifiers and Health",
+        },
+      ],
+    }
   },
 ];

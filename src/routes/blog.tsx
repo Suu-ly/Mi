@@ -18,19 +18,17 @@ const Blog = () => {
         <title>Blog · Xiaomi</title>
       </Helmet>
       <main className="flex flex-col gap-48">
-        <Splash src={HomeSplash} alt="Xiaomi Smart Air Purifier 4">
-          <div className="flex min-h-svh w-full items-end justify-end px-4 py-12 md:px-16 md:py-32">
-            <div className="flex max-w-lg flex-col items-end gap-8 text-right">
-              <MaskText variant="splash" text="Home Essentials:" />
-              <MaskText
-                variant="splash"
-                text="Must-Have Items for a Healthier, Happier Living Space"
-              />
+        <Splash src={articles[5].pic} alt="Xiaomi Smart Air Purifier 4">
+          <div className="flex min-h-svh w-full items-start justify-end px-4 py-12 md:px-16 md:py-32">
+            <div className="flex max-w-lg flex-col items-center gap-8 rounded-2xl bg-white px-9 py-7 text-left">
+              <MaskText variant="splash" text={articles[5].title} />
+              <p className="flex w-full items-start">{articles[5].date}</p>
               <MiText className="font-medium text-slate-800">
-                Meet Xiaomi Smart Air Purifier 4, your new best friend for
-                cleaner, fresher air at home
+                Transform your home into a sanctuary with these essentials for a
+                cleaner, healthier environment. From air purifiers to natural
+                cleaning, discover what you need.
               </MiText>
-              <Button asChild>
+              <Button asChild className="flex items-center">
                 <Link to="/product">Discover More</Link>
               </Button>
             </div>
