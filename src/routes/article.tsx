@@ -4,7 +4,6 @@ import Button from "@/components/ui/button";
 import MiText from "@/components/ui/miText";
 import { Helmet } from "react-helmet-async";
 import { Link, useParams } from "react-router-dom";
-import HomeSplash from "../assets/home/home_splash.png";
 
 import { articles } from "@/data/articles";
 
