@@ -170,7 +170,7 @@ export const articles: ArticleType = [
     },
   },
   {
-    title: "Clearing the Air: Tackling Hidden Pollutants in Your Home",
+    title: "Breathe Easy: The Role of Air Purifiers in Allergy Relief",
     date: "25 Oct 2024",
     pic: Article4,
     content: "",
