@@ -18,6 +18,7 @@ import { useLenis } from "lenis/react";
 
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import AboutSplash from "../assets/about/about_splash.jpg";
+
 import OurMission1 from "../assets/about/xiaomi1.jpeg";
 import OurMission1_long from "../assets/about/xiaomi1_long.jpeg";
 import OurMission2 from "../assets/about/xiaomi2.jpg";
@@ -100,9 +101,9 @@ const About = () => {
             </Button>
           </FadeIn>
         </section>
-        {/* <div className="h-[200vh]"></div>   ??? whats this ? */}
 
         <section className="flex flex-col gap-24 bg-white px-4 py-20 md:gap-0 md:px-16 md:py-24">
+          {/* <section className="md:gap-30 flex flex-col gap-12 px-4 py-20 md:px-16 md:py-24"> */}
           <div className="3xl:flex-row-reverse flex w-full flex-col-reverse justify-center gap-16 py-12 md:flex-row md:py-0">
             <div className="flex w-full flex-col items-center justify-center gap-8 md:items-start">
               <MaskText
@@ -110,6 +111,7 @@ const About = () => {
                 text="Our Mission"
                 className="mt-3 md:mt-0"
               />
+
               <div className="flex flex-col gap-4">
                 <FadeIn>
                   <MiText>
@@ -125,6 +127,7 @@ const About = () => {
                     committed to making that vision a reality.
                   </MiText>
                 </FadeIn>
+
               </div>
               <FadeIn>
                 <Button asChild>
@@ -132,9 +135,9 @@ const About = () => {
                 </Button>
               </FadeIn>
             </div>
-            {/* <FadeIn> */}
+           <FadeIn>
             <AspectRatio
-              ratio={2 / 1}
+              ratio={9 / 3}
               className="flex w-full items-center justify-center"
             >
               <img
@@ -143,7 +146,7 @@ const About = () => {
                 className="w-full rounded-3xl"
               />
             </AspectRatio>
-            {/* </FadeIn> */}
+           </FadeIn>
           </div>
           <div className="flex w-full flex-col-reverse justify-center gap-16 py-12 md:flex-row-reverse md:py-0">
             <div className="flex w-full flex-col items-center justify-center gap-8 md:items-start">
@@ -152,7 +155,8 @@ const About = () => {
                 text="We Care"
                 className="mt-3 md:mt-0"
               />
-              <div className="flex flex-col gap-4">
+
+              <div className="flex flex-col gap-4 text-justify">
                 <FadeIn>
                   <MiText>
                     For us, clean air isn't just a goal—it's a shared
@@ -168,6 +172,7 @@ const About = () => {
                     inspire with each step.
                   </MiText>
                 </FadeIn>
+
               </div>
               <FadeIn>
                 <Button asChild>
@@ -175,9 +180,9 @@ const About = () => {
                 </Button>
               </FadeIn>
             </div>
-            {/* <FadeIn> */}
+           <FadeIn>
             <AspectRatio
-              ratio={2 / 1}
+              ratio={9 / 3}
               className="flex w-full items-center justify-center"
             >
               <img
@@ -186,7 +191,7 @@ const About = () => {
                 className="w-full rounded-3xl"
               />
             </AspectRatio>
-            {/* </FadeIn> */}
+           </FadeIn>
           </div>
         </section>
 
