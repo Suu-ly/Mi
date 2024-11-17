@@ -8,6 +8,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useLenis } from "lenis/react";
+import { useRef } from "react";
+import { MaterialSymbol } from "react-material-symbols";
 import { Input } from "@/components/ui/input";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -125,6 +128,8 @@ const FAQ = [
 ];
 
 const Support = () => {
+  const Lenis = useLenis();
+  const helpSectionRef = useRef<HTMLDivElement>(null);
   return (
     <>
       <Helmet>
@@ -145,33 +150,48 @@ const Support = () => {
             </div>
           </div>
         </Splash>
-        <div className="flex flex-col gap-8 px-4 md:flex-row md:px-16">
-          <div className="flex-1">
+        <section className="flex flex-col gap-8 px-4 md:flex-row md:px-16">
+          <div className="flex-1 px-4 md:px-16">
             <MaskText
               variant="header"
               text="Frequently Asked Questions"
               className="mb-8"
             />
 
-            <MiText className="mt-8">Still need help? Chat with us.</MiText>
+            <div
+              className="mt-8 flex cursor-pointer items-center gap-2"
+              onClick={() => {
+                if (helpSectionRef.current) {
+                  Lenis?.scrollTo(helpSectionRef.current, { duration: 1 });
+                }
+              }}
+            >
+              <MaterialSymbol
+                icon="chat"
+                size={24}
+                className="text-slate-900"
+              />
+              <MiText>Still need help? Chat with us.</MiText>
+            </div>
           </div>
-          <div className="flex flex-1">
+
+          <div className="w-full px-4 md:w-1/2 md:px-16">
             <Accordion type="single" collapsible>
               {FAQ.map((faq, index) => (
                 <AccordionItem key={index} value={`item-${index}`}>
-                  <AccordionTrigger className="border-b border-gray-300 py-2">
+                  <AccordionTrigger className="w-full border-b border-gray-300 py-6">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="py-4 transition-all duration-200 ease-in-out">
+                  <AccordionContent className="w-full pb-4 pt-2 transition-all duration-200 ease-in-out">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>
           </div>
-        </div>
-        <section className="mx-auto max-w-3xl pt-32">
-          <div className="mb-24 w-full">
+        </section>
+        <section ref={helpSectionRef} className="mx-auto max-w-3xl pt-32">
+          <div className="mb-24 px-4">
             <MaskText
               variant="header"
               text="Get in Touch"
@@ -182,36 +202,37 @@ const Support = () => {
               problems.{" "}
             </MiText>
           </div>
-          <div className="flex flex-col items-center gap-12">
-            <div className="flex flex-col gap-8 md:flex-row">
-              <div className="flex-1">
+          <div className="flex flex-col items-center gap-12 px-4">
+            <div className="flex w-full flex-col gap-8 md:flex-row">
+              <div className="w-full px-4">
                 <Input variant={"large"} type="text" placeholder="First Name" />
               </div>
-              <div className="flex-1">
+              <div className="w-full px-4">
                 <Input variant={"large"} type="text" placeholder="Last Name" />
               </div>
             </div>
-            <div className="w-full">
+            <div className="w-full px-4">
               <Input variant={"large"} type="email" placeholder="Your Email" />
             </div>
-            <div className="w-full">
+            <div className="w-full px-4">
               <Input
                 variant={"large"}
                 type="text"
                 placeholder="Your Phone Number"
               />
             </div>
-            <div className="w-full">
+            <div className="w-full px-4">
               <textarea
                 className="h-64 w-full resize-none rounded-3xl border border-slate-300 bg-transparent px-6 py-4 text-2xl text-slate-900 placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 disabled:cursor-not-allowed disabled:opacity-50"
                 placeholder="How can we help you?"
               />
             </div>
             <Button asChild className="w-48">
-            <Link to="/">Talk to us</Link>
-          </Button>
+              <Link to="/">Talk to us</Link>
+            </Button>
           </div>
-          <div className="mt-12 text-center">
+
+          <div className="mt-12 px-4 text-center">
             <p className="text-xl font-medium text-slate-700">
               Or reach us at:
             </p>
