@@ -14,8 +14,8 @@ import {
   useTransform,
 } from "framer-motion";
 
-import ProductSplash from "../assets/product/productsplash2.jpg";
-import ThreeFiltersEdit from "../assets/product/threefilters_edit2.png";
+import ProductSplash from "../assets/product/productsplash.jpg";
+import ThreeFiltersEdit from "../assets/product/threefilters.png";
 import HighEfficiency from "../assets/product/highefficiency.png";
 import Bacteria from "../assets/product/bacteria.jpg";
 import Replacements from "../assets/product/replacements.png";
@@ -70,12 +70,12 @@ const Product = () => {
 
         {/* Section Title 1: Air Cleansing System */}
         <section>
-          <div className="mb-8 px-4 py-4 md:mb-16 md:px-16">
+          <div className="px-2 py-4 md:px-16">
             <div className="mx-auto max-w-3xl text-center">
               <MaskText
-                variant="splash"
+                variant="body"
                 text="Our Air Cleansing System"
-                className="mb-8"
+                className="font-light text-slate-500"
               />
             </div>
           </div>
@@ -112,8 +112,10 @@ const Product = () => {
             className="relative h-svh w-full bg-cover bg-center md:px-16"
             style={{ backgroundImage: `url(${HighEfficiency})` }}
           >
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 z-0 bg-gradient-to-b from-black to-transparent md:bg-gradient-to-r" />
             <div className="flex size-full items-center justify-start px-4 py-6 md:py-48">
-              <div className="mb-4 mt-4 flex max-w-lg flex-col items-start gap-10 text-left">
+              <div className="z-10 mb-4 mt-4 flex max-w-lg flex-col items-start gap-10 text-left">
                 <MaskText
                   variant="header"
                   text="Elevating Standards"
@@ -265,52 +267,61 @@ const Product = () => {
 
         {/* Section Title 2: Advanced Control Systems */}
         <section>
+          <div className="px-2 py-4 md:px-16">
+            <div className="mx-auto max-w-3xl text-center">
+              <MaskText
+                variant="body"
+                text="Controlling Our Purifier"
+                className="font-light text-slate-500"
+              />
+            </div>
+          </div>
           <div className="mb-8 px-4 md:mb-16 md:px-16">
             <div className="mx-auto max-w-3xl text-center">
               <MaskText
-                variant="splash"
+                variant="header"
                 text="Advanced Control Systems"
                 className="mb-8"
               />
             </div>
           </div>
 
-          <section className="flex w-full flex-col gap-2 px-4 pb-20 md:flex-row md:px-16">
-            <div className="flex flex-1 flex-col items-center gap-8 text-center md:items-center md:text-center">
+          <section className="flex w-full flex-col gap-2 px-4 pb-14 md:flex-row md:px-16">
+            <div className="flex flex-1 flex-col items-center gap-4 text-center md:items-center md:text-center">
               <img
                 src={Tap}
                 alt="TapIcon"
-                className="h-[100px] w-[100px] max-w-full object-cover object-center"
+                className="h-[80px] w-[80px] max-w-full object-cover object-center"
               />
               <MaskText
-                variant="header"
+                variant="body"
                 text="One-touch Auto Mode"
-                className="w-full text-slate-900"
+                className="mb-6 w-full text-slate-900"
               />
             </div>
 
-            <div className="flex flex-1 flex-col items-center gap-8 text-center md:items-center md:text-center">
+            <div className="flex flex-1 flex-col items-center gap-4 text-center md:items-center md:text-center">
               <img
                 src={Phone}
                 alt="PhoneIcon"
-                className="h-[100px] w-[100px] max-w-full items-center rounded-3xl object-cover object-center"
+                className="h-[80px] w-[80px] max-w-full items-center rounded-3xl object-cover object-center"
               />
               <MaskText
-                variant="header"
+                variant="body"
                 text="Smart Control"
-                className="w-full text-slate-900"
+                className="mb-6 w-full text-slate-900"
               />
             </div>
-            <div className="flex flex-1 flex-col items-center gap-8 text-center md:items-center md:text-center">
+            <div className="flex flex-1 flex-col items-center gap-4 text-center md:items-center md:text-center">
               <img
                 src={Mic}
                 alt="Mic Icon"
-                className="h-[100px] w-[100px] max-w-full rounded-3xl object-cover object-center"
+                className="h-[80px] w-[80px] max-w-full rounded-3xl object-cover object-center"
               />
               <MaskText
-                variant="header"
+                variant="body"
                 text="Voice-Control Support"
-                className="w-full text-slate-900"
+                className="mb-6 w-full text-slate-900"
               />
             </div>
           </section>
@@ -412,12 +423,22 @@ const Product = () => {
 
           {/* Section 3: Smart, Simple, and Reliable Solutions */}
           <section>
+            <div className="px-2 py-4 md:px-16">
+              <div className="mx-auto mt-4 max-w-3xl text-center">
+                <MaskText
+                  variant="body"
+                  text="Using Our Product
+              "
+                  className="font-light text-slate-500"
+                />
+              </div>
+            </div>
             <div className="mb-8 px-4 md:mb-16 md:px-16">
               <div className="mx-auto max-w-3xl text-center">
                 <MaskText
-                  variant="splash"
+                  variant="header"
                   text="Smart, Simple, and Reliable Solutions"
-                  className="mb-8"
+                  className="mb-20"
                 />
               </div>
             </div>
@@ -433,6 +454,7 @@ const Product = () => {
                     text="Real-time Air Quality"
                     className="mb-8"
                   />
+
                   <MiText>
                     The Smart Air Purifier 4 features a dynamic PM2.5 OLED
                     display with real-time air quality data and a color-coded
@@ -442,12 +464,12 @@ const Product = () => {
               </div>
             </div>
 
-            <div className="m-8 px-4 py-16 md:mb-16 md:px-16">
+            <div className="mt-10 px-4 py-16 md:mb-4 md:px-16">
               <div className="mx-auto max-w-3xl text-center">
                 <MaskText
                   variant="header"
                   text="Durable and Easy to Use"
-                  className="mb-8"
+                  className="mb-4"
                 />
                 <MiText>
                   Embrace the luxury of a product designed for modern living
@@ -456,39 +478,36 @@ const Product = () => {
             </div>
 
             <section className="flex w-full flex-col gap-8 px-4 md:flex-row md:px-16">
-              <div className="flex flex-1 flex-col items-center gap-8 text-center md:items-start md:text-center">
+              <div className="mt-4 flex flex-1 flex-col items-center gap-4 text-center md:items-start md:text-center">
                 <img
                   src={EasyOpen}
                   alt="Easy Open"
                   className="h-[415px] w-full max-w-full rounded-3xl object-cover object-center"
                 />
-                <MaskText
-                  variant="header"
-                  text="Easy, Intuitive Design"
-                  className="mt-8 text-slate-900"
-                />
-                <MiText className="block w-full text-center">
+
+                <p className="w-full text-center text-xl font-medium text-slate-900">
+                  Easy, Intuitive Design
+                </p>
+                <p className="w-full text-center text-lg text-slate-700">
                   Magnetic-doors
-                </MiText>
+                </p>
               </div>
-              <div className="flex flex-1 flex-col items-center gap-8 text-center md:items-start md:text-center">
+              <div className="mt-4 flex flex-1 flex-col items-center gap-4 text-center md:items-start md:text-center">
                 <img
                   src={Durable}
                   alt="Durable"
                   className="h-[415px] w-full max-w-full rounded-3xl object-cover object-center"
                 />
-                <MaskText
-                  variant="header"
-                  text="Built to Last"
-                  className="mt-8 w-full text-center text-slate-900"
-                />
-                <MiText className="block w-full text-center">
+                <p className="w-full text-center text-xl font-medium text-slate-900">
+                  Built to Last
+                </p>
+                <p className="w-full text-center text-lg text-slate-700">
                   Weather-resistant ABS material
-                </MiText>
+                </p>
               </div>
             </section>
 
-            <div className="m-8 px-4 py-16 md:mb-16 md:px-16">
+            <div className="mt-8 px-4 py-16 md:px-16">
               <div className="mx-auto max-w-3xl text-center">
                 <MaskText
                   variant="header"
@@ -504,50 +523,44 @@ const Product = () => {
             </div>
 
             <section className="flex w-full flex-col gap-3 px-4 pb-20 md:flex-row md:px-16">
-              <div className="flex flex-1 flex-col items-center gap-8 text-center md:items-start md:text-center">
+              <div className="flex flex-1 flex-col items-center gap-4 text-center md:items-start md:text-center">
                 <img
                   src={RemoveGrill}
                   alt="Remove Grill"
-                  className="h-[500px] w-full max-w-full rounded-3xl object-cover object-center"
+                  className="mt-8 h-[500px] w-full max-w-full rounded-3xl object-cover object-center"
                 />
-                <MaskText
-                  variant="header"
-                  text="Step 1"
-                  className="mt-8 w-full text-slate-900"
-                />
-                <MiText className="block w-full text-center">
+                <p className="w-full text-center text-xl font-medium text-slate-900">
+                  Step 1
+                </p>
+                <p className="w-full text-center text-lg text-slate-700">
                   Remove the Grill
-                </MiText>
+                </p>
               </div>
-              <div className="flex flex-1 flex-col items-center gap-8 text-center md:items-start md:text-center">
+              <div className="flex flex-1 flex-col items-center gap-4 text-center md:items-start md:text-center">
                 <img
                   src={CleanGrill}
                   alt="Clean Grill"
-                  className="h-[500px] w-full max-w-full rounded-3xl object-cover object-center"
+                  className="mt-8 h-[500px] w-full max-w-full rounded-3xl object-cover object-center"
                 />
-                <MaskText
-                  variant="header"
-                  text="Step 2"
-                  className="mt-8 w-full text-slate-900"
-                />
-                <MiText className="block w-full text-center">
+                <p className="w-full text-center text-xl font-medium text-slate-900">
+                  Step 2
+                </p>
+                <p className="w-full text-center text-lg text-slate-700">
                   Clean air ducts and blades
-                </MiText>
+                </p>
               </div>
-              <div className="flex flex-1 flex-col items-center gap-8 text-center md:items-start md:text-center">
+              <div className="flex flex-1 flex-col items-center gap-4 text-center md:items-start md:text-center">
                 <img
                   src={PlaceGrill}
                   alt="Place Grill"
-                  className="h-[500px] w-full max-w-full rounded-3xl object-cover object-center"
+                  className="mt-8 h-[500px] w-full max-w-full rounded-3xl object-cover object-center"
                 />
-                <MaskText
-                  variant="header"
-                  text="Step 3"
-                  className="mt-8 w-full text-slate-900"
-                />
-                <MiText className="block w-full text-center">
+                <p className="w-full text-center text-xl font-medium text-slate-900">
+                  Step 3
+                </p>
+                <p className="w-full text-center text-lg text-slate-700">
                   Screw grill back in place
-                </MiText>
+                </p>
               </div>
             </section>
 
