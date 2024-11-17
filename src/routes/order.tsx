@@ -5,6 +5,7 @@ import MiText from "@/components/ui/miText";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
+import FadeIn from "@/components/fadein";
 import {
   Select,
   SelectContent,
@@ -96,7 +97,7 @@ const Order = () => {
             <div className="absolute inset-0 z-0 bg-gradient-to-r from-white to-transparent md:bg-gradient-to-r" />
             <div className="z-10 my-4 flex max-w-2xl flex-col items-start gap-6 text-left">
               <MaskText variant="header" text="Subscribe to Xiaomi AirCare" />
-              <div className="flex flex-col gap-4">
+              <FadeIn className="flex flex-col gap-4">
                 <MiText className="text-slate-900">
                   Our monthly air filter replacement service ensures you never
                   run out of fresh air.
@@ -104,16 +105,18 @@ const Order = () => {
                 <MiText className="text-slate-900">
                   Delivered automatically, hassle-free.
                 </MiText>
-              </div>
-              <Button asChild>
-                <Link to="/subscribe">Learn More</Link>
-              </Button>
+              </FadeIn>
+              <FadeIn>
+                <Button asChild>
+                  <Link to="/subscribe">Learn More</Link>
+                </Button>
+              </FadeIn>
             </div>
           </div>
         </section>
 
         {/* Product Specifications Section */}
-        <section className="mt-8 px-4 md:px-16">
+        <FadeIn className="mt-8 px-4 md:px-16">
           <h3 className="text-4xl font-semibold text-slate-900">
             Product Specifications
           </h3>
@@ -254,7 +257,7 @@ const Order = () => {
               </div>
             </div>
           </div>
-        </section>
+        </FadeIn>
       </main>
     </>
   );
