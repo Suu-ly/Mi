@@ -102,14 +102,13 @@ const About = () => {
           </FadeIn>
         </section>
 
-        <section className="flex flex-col gap-24 bg-white px-4 py-20 md:gap-0 md:px-16 md:py-24">
-          {/* <section className="md:gap-30 flex flex-col gap-12 px-4 py-20 md:px-16 md:py-24"> */}
+        <section className="flex flex-col gap-24 bg-white px-4 py-20 md:gap-32 md:px-16 md:py-24">
           <div className="3xl:flex-row-reverse flex w-full flex-col-reverse justify-center gap-16 py-12 md:flex-row md:py-0">
             <div className="flex w-full flex-col items-center justify-center gap-8 md:items-start">
               <MaskText
                 variant="header"
                 text="Our Mission"
-                className="mt-3 md:mt-0"
+                className="mt-5 md:mt-3"
               />
 
               <div className="flex flex-col gap-4">
@@ -127,7 +126,6 @@ const About = () => {
                     committed to making that vision a reality.
                   </MiText>
                 </FadeIn>
-
               </div>
               <FadeIn>
                 <Button asChild>
@@ -135,7 +133,6 @@ const About = () => {
                 </Button>
               </FadeIn>
             </div>
-           <FadeIn>
             <AspectRatio
               ratio={9 / 3}
               className="flex w-full items-center justify-center"
@@ -146,14 +143,13 @@ const About = () => {
                 className="w-full rounded-3xl"
               />
             </AspectRatio>
-           </FadeIn>
           </div>
           <div className="flex w-full flex-col-reverse justify-center gap-16 py-12 md:flex-row-reverse md:py-0">
             <div className="flex w-full flex-col items-center justify-center gap-8 md:items-start">
               <MaskText
                 variant="header"
                 text="We Care"
-                className="mt-3 md:mt-0"
+                className="mt-12 md:mt-3"
               />
 
               <div className="flex flex-col gap-4 text-justify">
@@ -172,15 +168,11 @@ const About = () => {
                     inspire with each step.
                   </MiText>
                 </FadeIn>
-
               </div>
-              <FadeIn>
-                <Button asChild>
-                  <Link to="/support">Chat with Us</Link>
-                </Button>
-              </FadeIn>
+              <Button asChild>
+                <Link to="/support">Chat with Us</Link>
+              </Button>
             </div>
-           <FadeIn>
             <AspectRatio
               ratio={9 / 3}
               className="flex w-full items-center justify-center"
@@ -191,7 +183,6 @@ const About = () => {
                 className="w-full rounded-3xl"
               />
             </AspectRatio>
-           </FadeIn>
           </div>
         </section>
 
@@ -224,13 +215,11 @@ const About = () => {
                 >
                   <div className="flex h-full w-auto flex-col justify-between gap-6 rounded-3xl">
                     <div className="flex items-center gap-3">
-                      {/* <FadeIn> */}
                       <img
                         src={team.pic}
                         alt={team.name}
                         className="aspect-[3/4] w-full min-w-52 rounded-3xl object-cover"
                       />
-                      {/* </FadeIn> */}
                     </div>
                     <div>
                       <FadeIn>
