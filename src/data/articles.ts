@@ -7,14 +7,20 @@ import Article5 from "../assets/articles/article5.png";
 import Article6 from "../assets/articles/article6.jpeg";
 import Article6_cropped from "../assets/articles/article6_cropped.jpeg";
 
-
 type ArticleType = {
   title: string;
   date: string;
   pic: string;
   pic_cropped?: string;
   content: {
-    body: { paraTitle?: string; paraText: string; paraText2?: string; paraText3?: string; paraText4?: string; paraText5?: string }[];
+    body: {
+      paraTitle?: string;
+      paraText: string;
+      paraText2?: string;
+      paraText3?: string;
+      paraText4?: string;
+      paraText5?: string;
+    }[];
     sources: { link: string; linkTitle: string; supporting: string }[];
   };
 }[];
@@ -30,7 +36,7 @@ export const articles: ArticleType = [
       body: [
         {
           paraText:
-            "Air purifiers have become more popular as people learn about the importance of indoor air quality. However, misconceptions about their effectiveness and functions abound. Here’s a closer look at common myths surrounding air purifiers and what the science actually says.",
+            "Air purifiers have become more popular as people learn about the importance of indoor air quality. However, misconceptions about their effectiveness and functions abound. Here's a closer look at common myths surrounding air purifiers and what the science actually says.",
         },
         {
           paraTitle: "Myth #1: All Air Purifiers Work the Same Way",
@@ -40,13 +46,13 @@ export const articles: ArticleType = [
         {
           paraTitle: "Myth #2: Air Purifiers Remove All Indoor Pollutants",
           paraText:
-            "While air purifiers are highly effective for many airborne particles, they may not eliminate all pollutants. For example, gases from paint or chemicals require an air purifier with activated carbon filters, like the one in the Xiaomi Air Purifier 4. It’'s also worth noting that proper ventilation and regular cleaning are essential for a truly clean indoor environment.",
+            "While air purifiers are highly effective for many airborne particles, they may not eliminate all pollutants. For example, gases from paint or chemicals require an air purifier with activated carbon filters, like the one in the Xiaomi Air Purifier 4. It''s also worth noting that proper ventilation and regular cleaning are essential for a truly clean indoor environment.",
         },
         {
           paraTitle:
             "Myth #3: Air Purifiers Are Only Necessary for Allergy Sufferers",
           paraText:
-            "Even those without allergies can benefit from improved air quality. Pollutants like VOCs, dust, and pet dander affect everyone, even if symptoms aren’t immediately noticeable. Prolonged exposure to poor air quality has been linked to respiratory and cardiovascular issues over time.",
+            "Even those without allergies can benefit from improved air quality. Pollutants like VOCs, dust, and pet dander affect everyone, even if symptoms aren't immediately noticeable. Prolonged exposure to poor air quality has been linked to respiratory and cardiovascular issues over time.",
         },
         {
           paraTitle:
@@ -56,7 +62,7 @@ export const articles: ArticleType = [
         },
         {
           paraText:
-            "Understanding how air purifiers work and what they can (and can’t) do helps set realistic expectations and make the most of their capabilities. The Xiaomi Air Purifier 4’s combination of advanced filtration and smart technology makes it an effective choice for keeping indoor air clean and healthy.",
+            "Understanding how air purifiers work and what they can (and can't) do helps set realistic expectations and make the most of their capabilities. The Xiaomi Air Purifier 4's combination of advanced filtration and smart technology makes it an effective choice for keeping indoor air clean and healthy.",
         },
       ],
       sources: [
@@ -125,7 +131,7 @@ export const articles: ArticleType = [
           paraText2:
             "CADR (Clean Air Delivery Rate): This refers to how efficient an air purifier can pump out clean air in a room. A higher CADR means faster, more effective air purification.",
           paraText3:
-            "Coverage Area: Different air purifiers can support different room sizes. Make sure the purifier’s coverage suits your room size for optimal air quality.",
+            "Coverage Area: Different air purifiers can support different room sizes. Make sure the purifier's coverage suits your room size for optimal air quality.",
           paraText4:
             "Noise Level: For quieter rooms like bedrooms, choose a model with low decibel ratings for undisturbed sleep.",
           paraText5:
@@ -139,7 +145,7 @@ export const articles: ArticleType = [
           paraTitle:
             "Introducing the Xiaomi Smart Air Purifier 4: Clean Air Made Simple",
           paraText:
-            "The Xiaomi Smart Air Purifier 4 combines high-grade filtration with smart technology to deliver clean air seamlessly. Equipped with a high-efficiency HEPA filter, it captures up to 99.97% of airborne particles, from allergens to tiny PM3.0 particles. The purifier’s activated carbon filter also neutralizes odors and VOCs, ensuring that your home remains a fresh, comfortable space. Its app-based control allows you to monitor air quality and adjust settings remotely, perfect for users seeking a modern, low-maintenance way to enhance their indoor environment.",
+            "The Xiaomi Smart Air Purifier 4 combines high-grade filtration with smart technology to deliver clean air seamlessly. Equipped with a high-efficiency HEPA filter, it captures up to 99.97% of airborne particles, from allergens to tiny PM3.0 particles. The purifier's activated carbon filter also neutralizes odors and VOCs, ensuring that your home remains a fresh, comfortable space. Its app-based control allows you to monitor air quality and adjust settings remotely, perfect for users seeking a modern, low-maintenance way to enhance their indoor environment.",
         },
         {
           paraText:
@@ -196,8 +202,10 @@ export const articles: ArticleType = [
           paraTitle: "Additional Tips for Allergy Control at Home",
           paraText:
             "Dust and Vacuum Regularly: Use a vacuum with a HEPA filter to trap allergens effectively.",
-          paraText2: "Wash Bedding Frequently: This helps reduce dust mites in your living space.",
-          paraText3: "Monitor Humidity Levels: Keeping humidity low discourages mold growth.",
+          paraText2:
+            "Wash Bedding Frequently: This helps reduce dust mites in your living space.",
+          paraText3:
+            "Monitor Humidity Levels: Keeping humidity low discourages mold growth.",
         },
         {
           paraText:
@@ -218,7 +226,8 @@ export const articles: ArticleType = [
         {
           link: "https://www.eurekaforbes.com/blog/benefits-of-an-air-purifier.html",
           supporting: "Eureka Forbes",
-          linkTitle: "7 Benefits of an Air Purifier for Improving Indoor Air Quality",
+          linkTitle:
+            "7 Benefits of an Air Purifier for Improving Indoor Air Quality",
         },
       ],
     },
@@ -242,12 +251,14 @@ export const articles: ArticleType = [
           paraTitle: "Health Effects of Indoor Pollutants",
           paraText:
             "Poor indoor air quality is linked to respiratory issues, allergies, and even chronic conditions like asthma. The World Health Organization highlights indoor air pollution as a leading cause of health problems globally.",
-          paraText2: "Symptoms from exposure can include headaches, fatigue, and eye irritation, often going unnoticed but building up over time.",
+          paraText2:
+            "Symptoms from exposure can include headaches, fatigue, and eye irritation, often going unnoticed but building up over time.",
         },
         {
-          paraTitle: "Using the Smart Air Purifier 4 to Combat Indoor Pollutants",
+          paraTitle:
+            "Using the Smart Air Purifier 4 to Combat Indoor Pollutants",
           paraText:
-            "The Xiaomi Smart Air Purifier 4 tackles these issues head-on. Designed to capture even the smallest airborne particles, it uses advanced HEPA filtration to clean the air and neutralize pollutants. Whether it’s reducing allergens or removing VOCs, this purifier is an essential tool in maintaining a healthy home environment.",
+            "The Xiaomi Smart Air Purifier 4 tackles these issues head-on. Designed to capture even the smallest airborne particles, it uses advanced HEPA filtration to clean the air and neutralize pollutants. Whether it's reducing allergens or removing VOCs, this purifier is an essential tool in maintaining a healthy home environment.",
         },
         {
           paraTitle: "Additional Tips for Improving Indoor Air Quality",
@@ -309,7 +320,7 @@ export const articles: ArticleType = [
         },
         {
           paraTitle:
-            "Beyond the Product: Xiaomi’s Broader Sustainability Goals",
+            "Beyond the Product: Xiaomi's Broader Sustainability Goals",
           paraText:
             "Xiaomi is committed to broader environmental goals, including energy reduction, waste management, and eco-conscious packaging. These practices ensure that from manufacturing to disposal, the Smart Air Purifier 4 remains as green as possible.",
         },
@@ -341,17 +352,17 @@ export const articles: ArticleType = [
       body: [
         {
           paraText:
-            "Creating a home that supports health and happiness goes beyond aesthetics. It’s about cultivating an environment that nurtures wellness. Here are some must-have items that make a big difference in indoor quality of life.",
+            "Creating a home that supports health and happiness goes beyond aesthetics. It's about cultivating an environment that nurtures wellness. Here are some must-have items that make a big difference in indoor quality of life.",
         },
         {
           paraTitle: "1. A Reliable Air Purifier",
           paraText:
-            "Top of the list is an air purifier like the Xiaomi Smart Air Purifier 4. Indoor air can be laden with dust, allergens, and unseen particles. An air purifier cleanses the air, making it safer to breathe, especially for those with allergies or respiratory concerns. The Smart Air Purifier 4’s HEPA filtration system captures up to 99.97% of airborne particles, ensuring cleaner, healthier air in your living space.",
+            "Top of the list is an air purifier like the Xiaomi Smart Air Purifier 4. Indoor air can be laden with dust, allergens, and unseen particles. An air purifier cleanses the air, making it safer to breathe, especially for those with allergies or respiratory concerns. The Smart Air Purifier 4's HEPA filtration system captures up to 99.97% of airborne particles, ensuring cleaner, healthier air in your living space.",
         },
         {
           paraTitle: "2. Indoor Plants for Natural Freshness",
           paraText:
-            "Plants like spider plants, snake plants, and peace lilies can add natural beauty while slightly enhancing air quality. While their impact isn’t as strong as an air purifier, they bring life and vibrancy into any room.",
+            "Plants like spider plants, snake plants, and peace lilies can add natural beauty while slightly enhancing air quality. While their impact isn't as strong as an air purifier, they bring life and vibrancy into any room.",
         },
         {
           paraTitle: "3. Non-Toxic Cleaning Supplies",
@@ -361,7 +372,7 @@ export const articles: ArticleType = [
         {
           paraTitle: "4. Humidifier for Added Comfort",
           paraText:
-            "During dry months, a humidifier can help maintain optimal moisture levels, preventing dry skin and respiratory irritation. Paired with an air purifier, it’s an excellent way to create a balanced and comfortable atmosphere.",
+            "During dry months, a humidifier can help maintain optimal moisture levels, preventing dry skin and respiratory irritation. Paired with an air purifier, it's an excellent way to create a balanced and comfortable atmosphere.",
         },
         {
           paraTitle: "5. Essential Oil Diffuser for Relaxation",
@@ -370,7 +381,7 @@ export const articles: ArticleType = [
         },
         {
           paraText:
-            "Building a healthy living space is all about mindful choices. With essentials like air purifiers and natural cleaning supplies, you’re well on your way to a home that supports your well-being every day.",
+            "Building a healthy living space is all about mindful choices. With essentials like air purifiers and natural cleaning supplies, you're well on your way to a home that supports your well-being every day.",
         },
       ],
       sources: [
@@ -395,6 +406,6 @@ export const articles: ArticleType = [
           linkTitle: "Humidifiers and Health",
         },
       ],
-    }
+    },
   },
 ];

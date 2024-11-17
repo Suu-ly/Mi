@@ -26,7 +26,7 @@ const Order = () => {
       <main className="flex flex-col gap-16">
         <div className="flex flex-col gap-8 px-4 pt-[104px] md:flex-row md:px-16">
           {/* Left Section - Product Image */}
-          <div className="size-full h-[75vh] min-h-[568px] min-w-60 flex-[2]">
+          <div className="size-full h-[75vh] min-h-[576px] min-w-60 flex-[2]">
             <img
               src={Cta}
               alt="Smart Air Purifier 4"
