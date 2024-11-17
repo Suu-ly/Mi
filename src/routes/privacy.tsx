@@ -1,9 +1,6 @@
 import MaskText from "@/components/maskText";
-import Splash from "@/components/splash";
-import Button from "@/components/ui/button";
 import MiText from "@/components/ui/miText";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 
 import Plant from "../assets/privacy/plant.jpg";
 
@@ -189,7 +186,7 @@ const contacts = [
     text: " Contact No.      : 81234567 ",
   },
   {
-    id: 1,
+    id: 2,
     text: " Email Address  : mi@gmail.com",
   },
 ];
@@ -210,7 +207,7 @@ const effective = [
     text: " Effective date  :           05/11/2024",
   },
   {
-    id: 1,
+    id: 2,
     text: " Last updated   :           05/11/2024",
   },
 ];
