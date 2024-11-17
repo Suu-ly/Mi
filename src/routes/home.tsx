@@ -23,8 +23,8 @@ import { useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-import HomeSplash from "../assets/home/home_splash.png";
-import HomeSplashCrop from "../assets/home/home_splash_crop.png";
+import HomeSplash from "../assets/home/home_splash.jpg";
+import HomeSplashCrop from "../assets/home/home_splash_crop.jpg";
 
 import dust1 from "../assets/home/dust_1.png";
 import dust2 from "../assets/home/dust_2.png";

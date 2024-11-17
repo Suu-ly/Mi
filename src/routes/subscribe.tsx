@@ -4,7 +4,7 @@ import Splash from "@/components/splash";
 import MiText from "@/components/ui/miText";
 import { Helmet } from "react-helmet-async";
 
-import SubscribeSplash from "../assets/subscription/purifier.png";
+import SubscribeSplash from "../assets/subscription/purifier.jpg";
 
 import Virus from "../assets/subscription/virus.png";
 
