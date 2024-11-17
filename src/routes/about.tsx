@@ -67,7 +67,7 @@ const About = () => {
                 className="md:text-slate-50"
               />
               <FadeIn>
-                <MiText className="max-w-xs text-center font-medium text-slate-800 md:text-start md:text-slate-200 lg:max-w-md">
+                <MiText className="max-w-xs text-center text-slate-800 md:text-start md:text-slate-100 lg:max-w-md">
                   Bringing Health and Comfort to Every Corner of Your Home
                 </MiText>
               </FadeIn>

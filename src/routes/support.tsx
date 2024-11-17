@@ -137,12 +137,12 @@ const Support = () => {
       </Helmet>
       <main className="flex flex-col gap-20">
         <Splash src={SupportSplash} alt="Xiaomi Smart Air Purifier 4">
-          <div className="flex size-full items-start justify-end px-4 py-12 md:px-56 md:py-48">
+          <div className="flex size-full items-start justify-end px-4 pb-16 pt-[104px] md:px-16 md:pb-32">
             <div className="flex max-w-sm flex-col items-end gap-8 text-right">
               <MiText className="font-medium text-emerald-600">
                 Help Centre
               </MiText>
-              <MaskText variant="splash" text="How Can We Help You" />
+              <MaskText variant="splash" text="How can we help you" />
               <MiText className="font-medium text-slate-800">
                 Find answers to your questions or get in touch with our support
                 team.
@@ -151,7 +151,7 @@ const Support = () => {
           </div>
         </Splash>
         <section className="flex flex-col gap-8 px-4 md:flex-row md:px-16">
-          <div className="flex-1 px-4 md:px-16">
+          <div className="flex-1">
             <MaskText
               variant="header"
               text="Frequently Asked Questions"
@@ -169,75 +169,89 @@ const Support = () => {
               <MaterialSymbol
                 icon="chat"
                 size={24}
-                className="text-slate-900"
+                className="text-slate-700"
               />
               <MiText>Still need help? Chat with us.</MiText>
             </div>
           </div>
 
-          <div className="w-full px-4 md:w-1/2 md:px-16">
+          <div className="w-full flex-1 md:w-auto">
             <Accordion type="single" collapsible>
               {FAQ.map((faq, index) => (
                 <AccordionItem key={index} value={`item-${index}`}>
-                  <AccordionTrigger className="border-gray-300 pb-4">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="w-full transition-all duration-200 ease-in-out">
-                    {faq.answer}
-                  </AccordionContent>
+                  <AccordionTrigger>{faq.question}</AccordionTrigger>
+                  <AccordionContent>{faq.answer}</AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>
           </div>
         </section>
-        <section ref={helpSectionRef} className="mx-auto max-w-3xl pt-32">
-          <div className="mb-24 px-4">
+        <section
+          ref={helpSectionRef}
+          className="mx-auto w-full px-4 md:max-w-3xl md:px-16"
+        >
+          <div className="mb-16">
             <MaskText
               variant="header"
               text="Get in Touch"
               className="mb-4 text-center"
             />
-            <MiText className="text-center">
-              We're here to help!
-            </MiText>
+            <MiText className="text-center">We're here to help!</MiText>
           </div>
-          <div className="flex flex-col items-center gap-12 px-4">
-            <div className="flex w-full flex-col gap-12 md:flex-row">
+          <div className="flex w-full flex-col items-center gap-8">
+            <div className="flex w-full flex-col gap-8 md:flex-row">
               <div className="w-full">
-                <Input variant={"large"} type="text" placeholder="First Name" />
+                <Input
+                  variant={"large"}
+                  type="text"
+                  placeholder="First Name"
+                  className="rounded-full"
+                />
               </div>
               <div className="w-full">
-                <Input variant={"large"} type="text" placeholder="Last Name" />
+                <Input
+                  variant={"large"}
+                  type="text"
+                  placeholder="Last Name"
+                  className="rounded-full"
+                />
               </div>
             </div>
-            <div className="w-full">
-              <Input variant={"large"} type="email" placeholder="Your Email" />
-            </div>
-            <div className="w-full">
-              <Input
-                variant={"large"}
-                type="text"
-                placeholder="Your Phone Number"
-              />
-            </div>
-            <div className="w-full">
-              <textarea
-                className="h-64 w-full resize-none rounded-3xl border border-slate-300 bg-transparent px-6 py-4 text-2xl text-slate-900 placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 disabled:cursor-not-allowed disabled:opacity-50"
-                placeholder="How can we help you?"
-              />
-            </div>
-            <Button asChild className="w-full">
+            <Input
+              variant={"large"}
+              type="email"
+              placeholder="Your Email"
+              className="rounded-full"
+            />
+            <Input
+              variant={"large"}
+              type="tel"
+              placeholder="Your Phone Number"
+              className="rounded-full"
+            />
+            <textarea
+              className="w-full resize-none rounded-3xl border border-slate-300 bg-transparent px-6 py-4 text-2xl text-slate-900 transition-shadow placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 disabled:cursor-not-allowed disabled:opacity-50"
+              placeholder="How can we help you?"
+              rows={6}
+            />
+            <Button asChild className="w-full py-4 text-2xl">
               <Link to="/">Talk to us</Link>
             </Button>
           </div>
 
-          <div className="mt-12 px-4 text-center">
+          <div className="mt-16 text-center">
             <p className="text-xl font-medium text-slate-700">
               Or reach us at:
             </p>
             <p className="text-lg text-slate-600">Phone: 800 852 8474</p>
             <p className="text-lg text-slate-600">
-              Email: service.sg@support.mi.com
+              Email:{" "}
+              <a
+                href="mailto:service.sg@support.mi.com"
+                className="hover:underline"
+              >
+                service.sg@support.mi.com
+              </a>
             </p>
           </div>
         </section>

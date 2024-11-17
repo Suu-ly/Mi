@@ -55,7 +55,7 @@ const Product = () => {
                 text="Smart Air Purifier 4"
                 className="text-slate-50"
               />
-              <MiText className="text-slate-50">
+              <MiText className="text-slate-100">
                 Experience fresh, clean air, for a healthier you.
               </MiText>
               <Button asChild>
