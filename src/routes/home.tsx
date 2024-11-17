@@ -308,7 +308,7 @@ const Home = () => {
               <MaskText variant="header" text="All the features you need." />
             </div>
             <motion.div
-              className={`relative flex flex-col gap-20 p-4 pt-[104px] transition-colors duration-500 md:left-full md:h-screen md:min-w-max md:flex-row md:items-center md:gap-16 md:pl-0 md:pr-16 ${flipped ? "bg-stone-900" : "bg-stone-50"}`}
+              className={`relative flex flex-col gap-20 px-4 transition-colors duration-500 md:left-full md:h-screen md:min-w-max md:flex-row md:items-center md:gap-16 md:pl-0 md:pr-16 md:pt-[104px] ${flipped ? "bg-stone-900" : "bg-stone-50"}`}
               style={isLarge ? { x } : undefined}
             >
               {keyFeatures.map((feature) => (
