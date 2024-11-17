@@ -67,6 +67,7 @@ const Header = () => {
           to="/"
           className="pointer-events-auto z-[100] flex size-14 items-center justify-center"
         >
+          <span className="sr-only">Xiaomi Homepage</span>
           <svg
             width="40"
             height="40"
@@ -164,6 +165,9 @@ const Header = () => {
               <Button
                 variant="ghost"
                 className="size-10 rounded-full fill-slate-700 p-0 hover:fill-slate-900 focus:fill-slate-900"
+                aria-label="Menu"
+                type="button"
+                aria-expanded={open}
                 onClick={() => setOpen(!open)}
               >
                 {open ? (
@@ -194,7 +198,7 @@ const Header = () => {
           </NavigationMenuList>
         </NavigationMenu>
       </div>
-      <motion.nav
+      <motion.div
         className="pointer-events-auto"
         animate={open ? "open" : "closed"}
         variants={{
@@ -206,7 +210,7 @@ const Header = () => {
           },
         }}
       >
-        <motion.ul
+        <motion.nav
           initial={false}
           animate={
             open
@@ -236,7 +240,7 @@ const Header = () => {
           }
           className="fixed -z-10 overflow-hidden bg-white lg:hidden"
         >
-          <div className="absolute left-8 flex flex-col justify-center gap-8 pt-32">
+          <ul className="absolute left-8 flex flex-col justify-center gap-8 pt-32">
             <motion.li variants={itemVariants} className="list-none">
               <HeaderLink to="/">Home</HeaderLink>
             </motion.li>
@@ -258,9 +262,9 @@ const Header = () => {
             <motion.li variants={itemVariants} className="list-none">
               <HeaderLink to="/guide">User Guide</HeaderLink>
             </motion.li>
-          </div>
-        </motion.ul>
-      </motion.nav>
+          </ul>
+        </motion.nav>
+      </motion.div>
     </header>
   );
 };

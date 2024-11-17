@@ -51,6 +51,7 @@ const Footer = () => {
     <footer className="mt-32 px-4 py-6 md:mt-48 md:p-16 md:pb-8">
       <div className="mb-16 flex flex-col justify-between gap-32 md:mb-32 md:flex-row">
         <Link to="/" className="size-16">
+          <span className="sr-only">Xiaomi Homepage</span>
           <svg
             width="64"
             height="64"

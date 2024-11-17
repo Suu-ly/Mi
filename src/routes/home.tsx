@@ -308,15 +308,15 @@ const Home = () => {
               <MaskText variant="header" text="All the features you need." />
             </div>
             <motion.div
-              className={`relative flex flex-col gap-20 px-4 transition-colors duration-500 md:left-full md:h-screen md:min-w-max md:flex-row md:items-center md:gap-16 md:pl-0 md:pr-16 md:pt-[104px] ${flipped ? "bg-stone-900" : "bg-stone-50"}`}
+              className={`relative flex flex-col gap-20 px-4 py-6 transition-colors duration-500 md:left-full md:h-screen md:min-w-max md:flex-row md:items-center md:gap-16 md:pl-0 md:pr-16 md:pt-[104px] ${flipped ? "bg-stone-900" : "bg-stone-50"}`}
               style={isLarge ? { x } : undefined}
             >
               {keyFeatures.map((feature) => (
                 <div
                   key={feature.title}
-                  className="flex h-full flex-col justify-center gap-6 md:max-w-xl"
+                  className="flex h-full flex-col justify-center gap-6 md:w-[36rem]"
                 >
-                  <div className="aspect-[3/2] size-full max-h-[768px]">
+                  <div className="aspect-[3/2] size-full max-h-[min(768px,calc(100vh-104px-48px-1.5rem-1.5rem))] md:aspect-auto">
                     <img
                       src={feature.image}
                       alt={feature.title}
