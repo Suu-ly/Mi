@@ -179,10 +179,10 @@ const Support = () => {
             <Accordion type="single" collapsible>
               {FAQ.map((faq, index) => (
                 <AccordionItem key={index} value={`item-${index}`}>
-                  <AccordionTrigger className="w-full border-b border-gray-300 py-6">
+                  <AccordionTrigger className="border-gray-300 pb-4">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="w-full pb-4 pt-2 transition-all duration-200 ease-in-out">
+                  <AccordionContent className="w-full transition-all duration-200 ease-in-out">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -198,36 +198,35 @@ const Support = () => {
               className="mb-4 text-center"
             />
             <MiText className="text-center">
-              Email, call, or complete the form for Xiaomi to solve your
-              problems.{" "}
+              We're here to help!
             </MiText>
           </div>
           <div className="flex flex-col items-center gap-12 px-4">
-            <div className="flex w-full flex-col gap-8 md:flex-row">
-              <div className="w-full px-4">
+            <div className="flex w-full flex-col gap-12 md:flex-row">
+              <div className="w-full">
                 <Input variant={"large"} type="text" placeholder="First Name" />
               </div>
-              <div className="w-full px-4">
+              <div className="w-full">
                 <Input variant={"large"} type="text" placeholder="Last Name" />
               </div>
             </div>
-            <div className="w-full px-4">
+            <div className="w-full">
               <Input variant={"large"} type="email" placeholder="Your Email" />
             </div>
-            <div className="w-full px-4">
+            <div className="w-full">
               <Input
                 variant={"large"}
                 type="text"
                 placeholder="Your Phone Number"
               />
             </div>
-            <div className="w-full px-4">
+            <div className="w-full">
               <textarea
                 className="h-64 w-full resize-none rounded-3xl border border-slate-300 bg-transparent px-6 py-4 text-2xl text-slate-900 placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 disabled:cursor-not-allowed disabled:opacity-50"
                 placeholder="How can we help you?"
               />
             </div>
-            <Button asChild className="w-48">
+            <Button asChild className="w-full">
               <Link to="/">Talk to us</Link>
             </Button>
           </div>

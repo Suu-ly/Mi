@@ -11,6 +11,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/carousel";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import SustainabilitySplash from "../assets/sustainability/sustainability_splash.jpg";
 import SmartSensors from "../assets/sustainability/smart_sensors.png";
 import EcoFriendly from "../assets/sustainability/ecofriendly.png";
@@ -54,7 +55,6 @@ const carouselSlides = [
   },
 ];
 
-
 const Sustainability = () => {
   return (
     <>
@@ -63,7 +63,7 @@ const Sustainability = () => {
       </Helmet>
       <main className="flex flex-col gap-48 overflow-hidden">
         <Splash src={SustainabilitySplash} alt="Xiaomi Smart Air Purifier 4">
-          <div className="flex size-full items-start justify-end px-4 py-28 md:px-56 md:py-48">
+          <div className="flex size-full items-start justify-end px-4 py-28 md:px-48 md:py-32">
             <div className="flex max-w-sm flex-col items-end gap-8 text-right">
               <MaskText variant="splash" text="Sustainability at Xiaomi" />
               <MiText className="font-medium text-slate-800">
@@ -72,7 +72,7 @@ const Sustainability = () => {
             </div>
           </div>
         </Splash>
-        <div className="flex max-w-full flex-col items-center px-4 text-center md:px-64">
+        <div className="flex max-w-full flex-col items-center px-4 text-center md:px-16">
           <MaskText
             variant="header"
             text="Purifying your space,"
@@ -128,7 +128,11 @@ const Sustainability = () => {
                         </MiText>
                       </FadeIn>
                       <Button asChild className="w-48">
-                        <a href={src.pdfLink} target="_blank" rel="noopener noreferrer">
+                        <a
+                          href={src.pdfLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           Learn More
                         </a>
                       </Button>
@@ -143,11 +147,13 @@ const Sustainability = () => {
         </section>
         <section className="flex w-full flex-col gap-32 px-4 md:flex-row md:px-16">
           <div className="flex flex-1 flex-col items-center gap-8 text-center md:items-start md:text-left">
-            <img
-              src={EcoFriendly}
-              alt="Eco-Friendly Materials"
-              className="h-[700px] w-full max-w-full rounded-3xl object-cover object-center"
-            />
+            <AspectRatio ratio={16 / 9} className="w-full">
+              <img
+                src={EcoFriendly}
+                alt="Eco-Friendly Materials"
+                className="size-full rounded-3xl object-cover"
+              />
+            </AspectRatio>
             <MaskText
               variant="header"
               text="Eco-Friendly Materials"
@@ -162,11 +168,13 @@ const Sustainability = () => {
             </FadeIn>
           </div>
           <div className="flex flex-1 flex-col items-center gap-8 text-center md:items-start md:text-left">
-            <img
-              src={Durability}
-              alt="Long-Lasting Durability"
-              className="h-[700px] w-full max-w-full rounded-3xl object-cover object-center"
-            />
+            <AspectRatio ratio={16 / 9} className="w-full">
+              <img
+                src={Durability}
+                alt="Long-Lasting Durability"
+                className="size-full rounded-3xl object-cover"
+              />
+            </AspectRatio>
             <MaskText
               variant="header"
               text="Long-Lasting Durability"
@@ -181,6 +189,7 @@ const Sustainability = () => {
             </FadeIn>
           </div>
         </section>
+
         <section
           className="relative h-svh w-full bg-cover bg-center"
           style={{ backgroundImage: `url(${SmartSensors})` }} // Fixed backgroundImage
@@ -208,16 +217,17 @@ const Sustainability = () => {
             <img
               src={Filter}
               alt="High Efficiency Filter"
-              className="h-auto w-full max-w-xs object-cover pb-16 md:max-w-sm md:pb-0 lg:max-w-md"
+              className="w-full scale-50 rounded-3xl object-cover md:scale-100"
             />
+
             <div className="flex flex-col gap-4 md:gap-6 lg:gap-8">
               <MaskText
                 variant="header"
                 text="Xiaomi's High Efficiency Filter"
-                className="text-slate-900"
+                className="text-left text-slate-900"
               />
               <FadeIn>
-                <MiText>
+                <MiText className="text-left">
                   This high-efficiency filter uses electrostatic and mechanical
                   filtration to reduce energy use, extend filter life, and
                   minimize waste—all while providing quiet, effective air
@@ -230,22 +240,23 @@ const Sustainability = () => {
             </div>
           </div>
         </section>
-        <div className="flex max-w-full flex-col items-center px-4 text-center md:px-64">
+        <div className="flex max-w-full flex-col items-center px-4 text-center md:px-16">
           <MaskText variant="header" text="Breathe Better," className="mb-2" />
           <MaskText
             variant="header"
             text="Live Cleaner"
             className="mb-8 text-emerald-600"
           />
-          {[
-            `Every choice we make reflects our commitment to sustainability.`,
-            `Join us on this journey to breathe better, live responsibly, and create lasting change.`,
-            `Together, we can enjoy cleaner air and a cleaner planet.`,
-          ].map((text) => (
             <FadeIn>
-              <MiText>{text}</MiText>
+              <MiText>
+                Every choice we make reflects our commitment to sustainability.
+                <br />
+                Join us on this journey to breathe better, live responsibly, and create
+                lasting change.
+                <br />
+                Together, we can enjoy cleaner air and a cleaner planet.
+              </MiText>
             </FadeIn>
-          ))}
         </div>
         <section className="flex max-w-full flex-col items-center px-16 text-center md:px-32">
           <MaskText variant="header" text="Our Awards" className="mb-16" />
