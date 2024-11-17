@@ -32,8 +32,8 @@ const Splash = ({
 
   return (
     <motion.section
-      className={cn("flex h-svh w-full", className)}
-      style={squeeze ? { scale } : undefined}
+      className={cn("flex h-svh w-full overflow-hidden", className)}
+      style={squeeze ? { scale, borderRadius: round } : undefined}
     >
       {children}
       <motion.div
