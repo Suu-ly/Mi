@@ -60,6 +60,10 @@ const Sustainability = () => {
     <>
       <Helmet>
         <title>Sustainability · Smart Air Purifier 4</title>
+        <meta
+          name="description"
+          content="Explore our commitment to sustainability. Learn how we reduce environmental impact, support eco-friendly practices, and strive for a greener future."
+        />
       </Helmet>
       <main className="flex flex-col gap-48">
         <Splash src={SustainabilitySplash} alt="Xiaomi Smart Air Purifier 4">

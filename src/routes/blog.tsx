@@ -24,6 +24,10 @@ const Blog = () => {
     <>
       <Helmet>
         <title>Blog · Xiaomi</title>
+        <meta
+          name="description"
+          content="Stay updated with the latest tips, insights, and news on air quality, sustainable living, and home essentials. Our blog offers expert advice and practical solutions to help you breathe easier and live better."
+        />
       </Helmet>
       <main className="flex flex-col gap-20 md:gap-48">
         <Splash src={articles[5].pic} alt="Xiaomi Smart Air Purifier 4">

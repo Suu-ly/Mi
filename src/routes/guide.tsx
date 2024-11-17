@@ -109,6 +109,10 @@ const Guide = () => {
     <>
       <Helmet>
         <title>User Guide · Smart Air Purifier 4</title>
+        <meta
+          name="description"
+          content="Get the most out of your product with our comprehensive User Guide. Find step-by-step instructions, tips, and troubleshooting advice."
+        />
       </Helmet>
       <main className="flex flex-col gap-48">
         <Splash src={UserGuideSplash} alt="Xiaomi Smart Air Purifier 4">

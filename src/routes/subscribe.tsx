@@ -36,6 +36,10 @@ const Subscribe = () => {
     <>
       <Helmet>
         <title>Subscribe · Xiaomi</title>
+        <meta
+          name="description"
+          content="Subscribe to AirCare: Enjoy hassle-free, automatic air filter replacements delivered to your door. Save time, money, and breathe cleaner air effortlessly with our convenient subscription service."
+        />
       </Helmet>
       <main className="flex flex-col gap-48">
         <Splash src={SubscribeSplash} alt="Xiaomi Smart Air Purifier 4">

@@ -42,6 +42,10 @@ const Product = () => {
     <>
       <Helmet>
         <title>Introducing · Smart Air Purifier 4</title>
+        <meta
+          name="description"
+          content="Explore the latest Xiaomi Air Purifier 4. Discover its many features, advanced filtration methods, and why it's the perfect choice for your home."
+        />
       </Helmet>
       <main className="flex flex-col gap-48">
         <Splash

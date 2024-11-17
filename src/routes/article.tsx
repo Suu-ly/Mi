@@ -19,6 +19,7 @@ const Article = () => {
     <>
       <Helmet>
         <title>{article.title} · Xiaomi</title>
+        <meta name="description" content={article.content.body[0].paraText} />
       </Helmet>
       <main className="flex flex-col gap-16">
         <Splash

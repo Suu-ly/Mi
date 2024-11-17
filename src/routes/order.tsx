@@ -23,6 +23,10 @@ const Order = () => {
     <>
       <Helmet>
         <title>Order · Smart Air Purifier 4</title>
+        <meta
+          name="description"
+          content="Place your order now for Xiaomi Air Purifier 4. Select quantity, sign up for our subscription service and complete your purchase with ease. Get your Xiaomi Air Purifier 4 today!"
+        />
       </Helmet>
       <main className="flex flex-col gap-32">
         <div className="flex flex-col gap-8 px-4 pt-[104px] md:flex-row md:px-16">

@@ -36,6 +36,10 @@ const Checkout = () => {
     <>
       <Helmet>
         <title>Checkout · Smart Air Purifier 4</title>
+        <meta
+          name="description"
+          content="Enter your details to order your very own Xiaomi Smart Air Purifier 4"
+        />
       </Helmet>
       <main className="mx-auto w-full max-w-screen-xl px-4 pt-[104px] md:px-16">
         <MaskText

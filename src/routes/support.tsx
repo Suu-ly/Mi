@@ -134,6 +134,10 @@ const Support = () => {
     <>
       <Helmet>
         <title>Support · Smart Air Purifier 4</title>
+        <meta
+          name="description"
+          content="Need help or have questions? Visit our Contact & Support page for assistance, FAQs, and ways to get in touch with our team."
+        />
       </Helmet>
       <main className="flex flex-col gap-20">
         <Splash src={SupportSplash} alt="Xiaomi Smart Air Purifier 4">

@@ -195,6 +195,10 @@ const Home = () => {
     <>
       <Helmet>
         <title>Home · Smart Air Purifier 4</title>
+        <meta
+          name="description"
+          content="Discover the Xiaomi Smart Air Purifier 4: Breathe cleaner, healthier air with our advanced, eco-friendly air purifiers. Enjoy low noise operation, smart features, and effortless filter replacements."
+        />
       </Helmet>
       <main
         className={cn(

@@ -52,6 +52,10 @@ const About = () => {
     <>
       <Helmet>
         <title>About · Xiaomi</title>
+        <meta
+          name="description"
+          content="Learn about our mission to provide cleaner, healthier air with innovative, eco-friendly solutions. Discover our commitment to sustainability and how we strive to make a positive impact on the environment and your well-being."
+        />
       </Helmet>
       <main className="flex flex-col gap-48">
         <Splash

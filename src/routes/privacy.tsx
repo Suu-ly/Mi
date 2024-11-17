@@ -222,6 +222,10 @@ const Privacy = () => {
     <>
       <Helmet>
         <title>Privacy Policy</title>
+        <meta
+          name="description"
+          content="Read our Privacy Policy to understand how we collect, use, and protect your data. Your privacy is important to us. Learn more about our commitment to security."
+        />
       </Helmet>
       <main className="flex size-full flex-col items-start justify-start gap-48">
         {/* Splash */}

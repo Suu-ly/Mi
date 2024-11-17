@@ -22,6 +22,10 @@ const Success = () => {
     <>
       <Helmet>
         <title>Order Success · Smart Air Purifier 4</title>
+        <meta
+          name="description"
+          content="You have successfully placed an order for a Xiaomi Smart Air Purifier 4"
+        />
       </Helmet>
       <main className="mx-auto w-full max-w-screen-xl px-4 pt-[104px] md:px-16">
         <MaskText
