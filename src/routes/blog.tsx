@@ -6,6 +6,7 @@ import Button from "@/components/ui/button";
 import MiText from "@/components/ui/miText";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { toast } from "sonner";
 
 import Parallax from "@/components/parallax";
 import { Input } from "@/components/ui/input";
@@ -14,9 +15,11 @@ import NewsLetter from "../assets/blog/newsletter.jpg";
 import NewsLetter_cropped from "../assets/blog/newsletter_cropped.jpg";
 
 import { articles } from "@/data/articles";
+import { useState } from "react";
 
 const Blog = () => {
   const isLarge = useMediaQuery("(min-width: 768px)");
+  const [email, setEmail] = useState("");
   return (
     <>
       <Helmet>
@@ -108,12 +111,18 @@ const Blog = () => {
                 variant={"default"}
                 type="email"
                 placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="border-slate-600 text-slate-50 placeholder:text-slate-200 focus-visible:ring-emerald-400"
               />
             </FadeIn>
             <FadeIn>
-              <Button asChild>
-                <Link to="/subscriebe">Subscribe</Link>
+              <Button
+                onClick={() => {
+                  if (email) toast("Subscribed successfully!");
+                }}
+              >
+                Subscribe
               </Button>
             </FadeIn>
           </div>

@@ -1,3 +1,4 @@
+import { Toaster } from "@/components/ui/sonner";
 import { ReactLenis } from "lenis/react";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
@@ -15,6 +16,7 @@ createRoot(document.getElementById("root")!).render(
         <ReactLenis root options={{ duration: 0.8 }}>
           <Header />
           <App />
+          <Toaster />
         </ReactLenis>
       </HelmetProvider>
     </BrowserRouter>
