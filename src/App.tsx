@@ -10,6 +10,7 @@ import Error from "./routes/error";
 import Guide from "./routes/guide";
 import Home from "./routes/home";
 import Order from "./routes/order";
+import Success from "./routes/orderSuccess";
 import Privacy from "./routes/privacy";
 import Product from "./routes/product";
 import Subscribe from "./routes/subscribe";
@@ -28,6 +29,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/order" element={<Order />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/success" element={<Success />} />
           <Route path="/support" element={<Support />} />
           <Route path="/guide" element={<Guide />} />
           <Route path="/blog" element={<Blog />} />
