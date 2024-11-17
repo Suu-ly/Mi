@@ -444,7 +444,7 @@ const Product = () => {
             </FadeIn>
           </div>
 
-          <FadeIn className="flex w-full flex-col gap-16 px-4 text-center md:flex-row md:gap-8 md:px-16">
+          <FadeIn className="flex w-full flex-col gap-20 px-4 text-center md:flex-row md:gap-8 md:px-16">
             <div className="w-full">
               <img
                 src={EasyOpen}
@@ -485,7 +485,7 @@ const Product = () => {
             </FadeIn>
           </div>
 
-          <FadeIn className="flex w-full flex-col justify-center gap-16 px-4 text-center md:flex-row md:gap-8 md:px-16">
+          <FadeIn className="flex w-full flex-col justify-center gap-20 px-4 text-center md:flex-row md:gap-8 md:px-16">
             <div className="w-full">
               <img
                 src={RemoveGrill}

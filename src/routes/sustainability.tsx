@@ -1,9 +1,3 @@
-import MaskText from "@/components/maskText";
-import Splash from "@/components/splash";
-import Button from "@/components/ui/button";
-import MiText from "@/components/ui/miText";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import {
   Carousel,
   CarouselContent,
@@ -11,23 +5,29 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/carousel";
+import FadeIn from "@/components/fadein";
+import MaskText from "@/components/maskText";
+import Splash from "@/components/splash";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import SustainabilitySplash from "../assets/sustainability/sustainability_splash.jpg";
-import SmartSensors from "../assets/sustainability/smart_sensors.png";
-import EcoFriendly from "../assets/sustainability/ecofriendly.png";
-import Durability from "../assets/sustainability/durability.png";
-import Filter from "../assets/sustainability/filter.png";
-import ESG from "../assets/sustainability/esg.webp";
-import WhitePaper from "../assets/sustainability/whitepaper.jpg";
-import TaskForce from "../assets/sustainability/taskforce.jpg";
+import Button from "@/components/ui/button";
+import MiText from "@/components/ui/miText";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import Award1 from "../assets/sustainability/award1.png";
 import Award2 from "../assets/sustainability/award2.png";
 import Award3 from "../assets/sustainability/award3.png";
 import Award4 from "../assets/sustainability/award4.png";
-import FadeIn from "@/components/fadein";
+import Durability from "../assets/sustainability/durability.png";
+import EcoFriendly from "../assets/sustainability/ecofriendly.png";
 import ESGPDF from "../assets/sustainability/ESG.pdf";
-import WhitePaperPDF from "../assets/sustainability/WhitePaper.pdf";
+import ESG from "../assets/sustainability/esg.webp";
+import Filter from "../assets/sustainability/filter.png";
+import SmartSensors from "../assets/sustainability/smart_sensors.png";
+import SustainabilitySplash from "../assets/sustainability/sustainability_splash.jpg";
+import TaskForce from "../assets/sustainability/taskforce.jpg";
 import TaskForcePDF from "../assets/sustainability/TaskForce.pdf";
+import WhitePaper from "../assets/sustainability/whitepaper.jpg";
+import WhitePaperPDF from "../assets/sustainability/WhitePaper.pdf";
 
 const carouselSlides = [
   {
@@ -61,29 +61,30 @@ const Sustainability = () => {
       <Helmet>
         <title>Sustainability · Smart Air Purifier 4</title>
       </Helmet>
-      <main className="flex flex-col gap-48 overflow-hidden">
+      <main className="flex flex-col gap-48">
         <Splash src={SustainabilitySplash} alt="Xiaomi Smart Air Purifier 4">
-          <div className="flex size-full items-start justify-end px-4 py-28 md:px-48 md:py-32">
+          <div className="z-10 flex size-full items-start justify-end px-4 pb-16 pt-[104px] md:px-16 md:pb-32">
             <div className="flex max-w-sm flex-col items-end gap-8 text-right">
-              <MaskText variant="splash" text="Sustainability at Xiaomi" />
-              <MiText className="font-medium text-slate-800">
+              <MaskText
+                variant="splash"
+                text="Sustainability at Xiaomi"
+                className="text-slate-50"
+              />
+              <MiText className="text-slate-100">
                 Breathing Clean, Living Green
               </MiText>
             </div>
           </div>
+          <div className="absolute inset-0 bottom-1/2 bg-gradient-to-b from-stone-900/80 to-white/0 md:bottom-0 md:left-1/2 md:bg-gradient-to-l"></div>
         </Splash>
         <div className="flex max-w-full flex-col items-center px-4 text-center md:px-16">
-          <MaskText
-            variant="header"
-            text="Purifying your space,"
-            className="mb-2"
-          />
+          <MaskText variant="header" text="Purifying your space," />
           <MaskText
             variant="header"
             text="Protecting our planet."
             className="mb-8 text-emerald-600"
           />
-          <FadeIn>
+          <FadeIn className="max-w-4xl">
             <MiText>
               At Xiaomi, we're committed to clean air and a healthy planet. Our
               mission is to improve indoor air quality with products designed
@@ -92,15 +93,12 @@ const Sustainability = () => {
             </MiText>
           </FadeIn>
         </div>
-        <section className="relative h-screen w-screen">
+        <section className="relative h-screen w-full">
           <Carousel
             opts={{
               align: "center",
               loop: true,
               containScroll: "trimSnaps",
-              breakpoints: {
-                "(min-width: 1024px)": { active: true },
-              },
             }}
             className="overflow-hidden"
           >
@@ -115,7 +113,7 @@ const Sustainability = () => {
                     alt={`Slide ${index + 1}`}
                     className="size-full object-cover"
                   />
-                  <div className="absolute inset-0 flex items-center justify-start bg-black/40 p-24 md:p-48">
+                  <div className="absolute inset-0 flex items-center justify-start bg-black/40 px-4 md:p-32">
                     <div className="flex max-w-3xl flex-col items-start">
                       <MaskText
                         variant="header"
@@ -127,65 +125,67 @@ const Sustainability = () => {
                           {src.description}
                         </MiText>
                       </FadeIn>
-                      <Button asChild className="w-48">
-                        <a
-                          href={src.pdfLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Learn More
-                        </a>
-                      </Button>
+                      <FadeIn>
+                        <Button asChild>
+                          <a
+                            href={src.pdfLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Learn More
+                          </a>
+                        </Button>
+                      </FadeIn>
                     </div>
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute left-8 top-1/2 -translate-y-1/2 border-slate-50 text-slate-50 hover:bg-emerald-500" />
-            <CarouselNext className="absolute right-8 top-1/2 -translate-y-1/2 border-slate-50 text-slate-50 hover:bg-emerald-500" />
+            <CarouselPrevious className="absolute bottom-12 left-4 border-slate-50 text-slate-50 hover:bg-emerald-500 md:left-8 md:top-1/2 md:-translate-y-1/2" />
+            <CarouselNext className="absolute bottom-12 left-20 border-slate-50 text-slate-50 hover:bg-emerald-500 md:left-auto md:right-8 md:top-1/2 md:-translate-y-1/2" />
           </Carousel>
         </section>
-        <section className="flex w-full flex-col gap-32 px-4 md:flex-row md:px-16">
-          <div className="flex flex-1 flex-col items-center gap-8 text-center md:items-start md:text-left">
-            <AspectRatio ratio={16 / 9} className="w-full">
-              <img
-                src={EcoFriendly}
-                alt="Eco-Friendly Materials"
-                className="size-full rounded-3xl object-cover"
-              />
-            </AspectRatio>
-            <MaskText
-              variant="header"
-              text="Eco-Friendly Materials"
-              className="mt-8 text-slate-900"
-            />
+        <section className="flex w-full flex-col gap-20 px-4 md:flex-row md:gap-8 md:px-16">
+          <div className="flex flex-1 flex-col items-center gap-6 text-center md:items-start md:text-left">
+            <FadeIn className="w-full">
+              <AspectRatio ratio={3 / 2} className="w-full">
+                <img
+                  src={EcoFriendly}
+                  alt="Eco-Friendly Materials"
+                  className="size-full rounded-3xl object-cover"
+                />
+              </AspectRatio>
+            </FadeIn>
             <FadeIn>
-              <MiText>
+              <h6 className="mb-2 font-display text-2xl font-semibold">
+                Eco-Friendly Materials
+              </h6>
+              <p className="text-slate-700">
                 We prioritise sustainable, recyclable materials in our designs.
                 Built to last, our air purifiers minimise waste and reduce
                 environmental impact from production to disposal.
-              </MiText>
+              </p>
             </FadeIn>
           </div>
-          <div className="flex flex-1 flex-col items-center gap-8 text-center md:items-start md:text-left">
-            <AspectRatio ratio={16 / 9} className="w-full">
-              <img
-                src={Durability}
-                alt="Long-Lasting Durability"
-                className="size-full rounded-3xl object-cover"
-              />
-            </AspectRatio>
-            <MaskText
-              variant="header"
-              text="Long-Lasting Durability"
-              className="mt-8 text-slate-900"
-            />
+          <div className="flex flex-1 flex-col items-center gap-6 text-center md:items-start md:text-left">
+            <FadeIn className="w-full">
+              <AspectRatio ratio={3 / 2} className="w-full">
+                <img
+                  src={Durability}
+                  alt="Long-Lasting Durability"
+                  className="size-full rounded-3xl object-cover"
+                />
+              </AspectRatio>
+            </FadeIn>
             <FadeIn>
-              <MiText>
+              <h6 className="mb-2 font-display text-2xl font-semibold">
+                Long-Lasting Durability
+              </h6>
+              <p className="text-slate-700">
                 Engineered for longevity, our durable air purifiers mean fewer
                 replacements, less waste, and reduced energy in manufacturing
                 and transport—benefiting you and the planet long-term.
-              </MiText>
+              </p>
             </FadeIn>
           </div>
         </section>
@@ -199,7 +199,7 @@ const Sustainability = () => {
               <MaskText
                 variant="header"
                 text="Smart Sensors"
-                className="text-emerald-50"
+                className="text-slate-50"
               />
               <FadeIn>
                 <MiText className="font-light text-slate-200">
@@ -212,53 +212,53 @@ const Sustainability = () => {
             </div>
           </div>
         </section>
-        <section className="flex w-full flex-col gap-8 px-4 md:flex-row md:gap-16 md:px-16 lg:gap-32 lg:px-32">
-          <div className="flex flex-col text-left md:flex-row md:items-center md:gap-8 lg:gap-16">
+        <section className="flex w-full flex-col gap-8 px-4 md:flex-row md:items-center md:gap-16 md:px-16 lg:gap-32">
+          <div className="flex aspect-[3/2] w-full flex-1 items-center justify-center md:aspect-auto">
             <img
               src={Filter}
               alt="High Efficiency Filter"
-              className="w-full scale-50 rounded-3xl object-cover md:scale-100"
+              className="h-full rounded-3xl object-contain"
             />
+          </div>
 
-            <div className="flex flex-col gap-4 md:gap-6 lg:gap-8">
-              <MaskText
-                variant="header"
-                text="Xiaomi's High Efficiency Filter"
-                className="text-left text-slate-900"
-              />
-              <FadeIn>
-                <MiText className="text-left">
-                  This high-efficiency filter uses electrostatic and mechanical
-                  filtration to reduce energy use, extend filter life, and
-                  minimize waste—all while providing quiet, effective air
-                  cleaning with fewer raw materials.
-                </MiText>
-              </FadeIn>
-              <Button asChild className="w-full md:w-48">
-                <Link to="/product">Learn More</Link>
-              </Button>
-            </div>
+          <div className="flex flex-[2] flex-col items-start gap-8">
+            <MaskText
+              variant="header"
+              text="Xiaomi's High Efficiency Filter"
+              className="text-left text-slate-900"
+            />
+            <FadeIn className="max-w-3xl">
+              <MiText className="text-left">
+                This high-efficiency filter uses electrostatic and mechanical
+                filtration to reduce energy use, extend filter life, and
+                minimize waste—all while providing quiet, effective air cleaning
+                with fewer raw materials.
+              </MiText>
+            </FadeIn>
+            <Button asChild>
+              <Link to="/product">Learn More</Link>
+            </Button>
           </div>
         </section>
         <div className="flex max-w-full flex-col items-center px-4 text-center md:px-16">
-          <MaskText variant="header" text="Breathe Better," className="mb-2" />
+          <MaskText variant="header" text="Breathe Better," />
           <MaskText
             variant="header"
             text="Live Cleaner"
             className="mb-8 text-emerald-600"
           />
-            <FadeIn>
-              <MiText>
-                Every choice we make reflects our commitment to sustainability.
-                <br />
-                Join us on this journey to breathe better, live responsibly, and create
-                lasting change.
-                <br />
-                Together, we can enjoy cleaner air and a cleaner planet.
-              </MiText>
-            </FadeIn>
+          <FadeIn>
+            <MiText>
+              Every choice we make reflects our commitment to sustainability.
+              <br />
+              Join us on this journey to breathe better, live responsibly, and
+              create lasting change.
+              <br />
+              Together, we can enjoy cleaner air and a cleaner planet.
+            </MiText>
+          </FadeIn>
         </div>
-        <section className="flex max-w-full flex-col items-center px-16 text-center md:px-32">
+        <section className="flex max-w-full flex-col items-center px-4 text-center sm:px-16">
           <MaskText variant="header" text="Our Awards" className="mb-16" />
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <img
