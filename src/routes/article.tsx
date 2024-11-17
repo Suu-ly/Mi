@@ -1,11 +1,10 @@
 import MaskText from "@/components/maskText";
 import Splash from "@/components/splash";
-import Button from "@/components/ui/button";
-import MiText from "@/components/ui/miText";
-import { Helmet } from "react-helmet-async";
-import { Link, useParams } from "react-router-dom";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
+import { Helmet } from "react-helmet-async";
+import { Navigate, useParams } from "react-router-dom";
 
+import MiText from "@/components/ui/miText";
 import { articles } from "@/data/articles";
 
 const Article = () => {
@@ -13,13 +12,15 @@ const Article = () => {
   const params = useParams();
   const id = params.id;
 
+  if (!id) return <Navigate to="/404" />;
+
   const article = articles[parseInt(id)];
   return (
     <>
       <Helmet>
         <title>{article.title} · Xiaomi</title>
       </Helmet>
-      <main className="flex flex-col gap-20 md:gap-48">
+      <main className="flex flex-col gap-16">
         <Splash
           src={
             isLarge
@@ -29,74 +30,66 @@ const Article = () => {
                 : article.pic
           }
           alt="Xiaomi Smart Air Purifier 4"
+          className="relative"
         >
-          <div className="justify-centre flex min-h-svh w-full items-end px-4 py-12 sm:px-48 md:gap-16 md:px-48 md:py-24 lg:px-64 2xl:px-96">
+          <div className="mx-auto flex max-w-4xl items-end px-4 pb-16 md:px-16">
             {/* Gradient overlay */}
-            <div className="absolute inset-0 z-10 rounded-3xl bg-gradient-to-b from-white/0 to-black/30"></div>
+            <div className="absolute inset-0 top-1/2 bg-gradient-to-b from-slate-50/0 to-slate-50/60 delay-500 duration-700 animate-in fade-in fill-mode-both"></div>
             <div className="relative z-20 flex flex-col items-start gap-8 text-left">
-              <MaskText
-                variant="splash"
-                text={article.title}
-                className="text-slate-50"
-              />
-              <p className="text-slate-200">{article.date}</p>
+              <MaskText variant="splash" text={article.title} />
+              <MiText>{article.date}</MiText>
             </div>
           </div>
         </Splash>
 
-        <section className="flex flex-col gap-8 px-4 py-12 sm:px-48 md:gap-16 md:px-48 md:py-24 lg:px-64 2xl:px-96">
+        <section className="mx-auto flex max-w-4xl flex-col gap-8 px-4 md:gap-16 md:px-16">
           {article.content.body.map((section, i) => (
-            <div key={i} className="mb-6 flex flex-col gap-4 md:gap-6">
+            <div
+              key={i}
+              className="mb-6 flex flex-col gap-4 text-lg text-slate-700 md:gap-6"
+            >
               {/* Conditionally render paraTitle if it exists */}
               {section.paraTitle && (
-                <h6 className="mb-2 font-display text-2xl font-semibold md:text-4xl">
+                <h6 className="mb-2 font-display text-2xl font-medium text-slate-900">
                   {section.paraTitle}
                 </h6>
               )}
 
               {/* Render paraText */}
-              <MiText className="text-justify">{section.paraText}</MiText>
+              <p className="text-justify">{section.paraText}</p>
 
               {/* Render paraText2 if exists */}
               {section.paraText2 && (
-                <MiText className="mt-1 text-justify">
-                  {section.paraText2}
-                </MiText>
+                <p className="mt-1 text-justify">{section.paraText2}</p>
               )}
               {/* Render paraText3 if exists */}
               {section.paraText3 && (
-                <MiText className="mt-1 text-justify">
-                  {section.paraText3}
-                </MiText>
+                <p className="mt-1 text-justify">{section.paraText3}</p>
               )}
               {/* Render paraText4 if exists */}
               {section.paraText4 && (
-                <MiText className="mt-1 text-justify">
-                  {section.paraText4}
-                </MiText>
+                <p className="mt-1 text-justify">{section.paraText4}</p>
               )}
               {/* Render paraText5 if exists */}
               {section.paraText5 && (
-                <MiText className="mt-1 text-justify">
-                  {section.paraText5}
-                </MiText>
+                <p className="mt-1 text-justify">{section.paraText5}</p>
               )}
             </div>
           ))}
 
           {/* Display the Sources at the end of the article */}
-          <div className="flex flex-col gap-2 md:gap-6">
-            <h6 className="mb-8 mt-12 font-display text-xl font-semibold md:mb-6 md:text-2xl">
+          <div>
+            <h6 className="mb-4 font-display text-2xl font-medium text-slate-900">
               Sources:
             </h6>
             {article.content.sources.map((source, i) => (
-              <div key={i} className="mb-6 flex flex-col md:gap-4">
-                <h6 className="font-normal text-slate-500 md:text-xl">
+              <div key={i} className="mb-4 flex flex-col gap-2">
+                <h6 className="font-normal text-slate-700 md:text-lg">
                   <a
                     href={source.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600 underline hover:text-indigo-700"
+                    className="text-blue-600 underline transition-colors hover:text-blue-800"
                   >
                     {source.linkTitle}
                   </a>
