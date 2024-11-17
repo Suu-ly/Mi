@@ -14,7 +14,7 @@ const AccordionItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
     ref={ref}
-    className={cn("border-b", className)}
+    className={cn("w-full border-b", className)} // Ensure item takes full width
     {...props}
   />
 ));
@@ -24,11 +24,11 @@ const AccordionTrigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
 >(({ className, children, ...props }, ref) => (
-  <AccordionPrimitive.Header className="flex">
+  <AccordionPrimitive.Header className="flex w-full">
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "flex flex-1 items-center justify-between py-4 gap-x-4 text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
+        "flex w-full items-center justify-between py-4 text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180", // Enforce full width
         className,
       )}
       {...props}
@@ -46,17 +46,13 @@ const AccordionContent = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
     ref={ref}
-    className="overflow-hidden text-left text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+    className={cn(
+      "w-full overflow-hidden text-left text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down", // Match trigger width
+      className,
+    )}
     {...props}
   >
-    <div
-      className={cn(
-        "flex flex-1 items-center justify-between pb-4 pt-0",
-        className,
-      )}
-    >
-      {children}
-    </div>
+    <div className={cn("w-full pb-4 pt-0", className)}>{children}</div>
   </AccordionPrimitive.Content>
 ));
 
