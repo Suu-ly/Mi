@@ -24,14 +24,14 @@ const Order = () => {
       <Helmet>
         <title>Order · Smart Air Purifier 4</title>
       </Helmet>
-      <main className="flex flex-col gap-16">
+      <main className="flex flex-col gap-32">
         <div className="flex flex-col gap-8 px-4 pt-[104px] md:flex-row md:px-16">
           {/* Left Section - Product Image */}
-          <div className="size-full h-[75vh] min-h-[576px] min-w-60 flex-[2]">
+          <div className="size-full flex-[2]">
             <img
               src={Cta}
               alt="Smart Air Purifier 4"
-              className="size-full rounded-3xl object-cover"
+              className="h-[75vh] min-h-[576px] w-full rounded-3xl object-cover"
             />
           </div>
 
@@ -116,145 +116,112 @@ const Order = () => {
         </section>
 
         {/* Product Specifications Section */}
-        <FadeIn className="mt-8 px-4 md:px-16">
+
+        <FadeIn className="space-y-8 divide-y divide-slate-200 px-4 md:px-16">
           <h3 className="text-4xl font-semibold text-slate-900">
             Product Specifications
           </h3>
-          <div className="mt-4 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1">
-            {/* Specification Item 1 */}
-            <div className="grid grid-cols-1 border-y border-slate-200 md:grid-cols-2 lg:grid-cols-2">
-              <div className="flex flex-col rounded-lg py-4">
-                <span className="text-sm font-medium text-slate-700"></span>
-                <span className="text-base font-semibold text-slate-900">
-                  General Information
+          {/* Specification Item 1 */}
+          <div className="grid grid-cols-1 pt-8 md:grid-cols-2">
+            <p className="text-base font-semibold text-slate-900">
+              General Information
+            </p>
+
+            <div className="flex flex-col gap-2">
+              {/* Text 1 */}
+              <div>
+                <span className="mr-1 font-semibold text-slate-900">Name:</span>
+                <span className="text-base text-slate-700">
+                  Smart Air Purifier 4
                 </span>
               </div>
-
-              <div className="flex flex-col rounded-lg py-4">
-                {/* Text 1 */}
-                <div>
-                  <span className="mr-1 font-semibold text-slate-900">
-                    Name:
-                  </span>
-                  <span className="text-base text-slate-700">
-                    Smart Air Purifier 4
-                  </span>
-                </div>
-                {/* Text 2 */}
-                <div>
-                  <span className="mr-1 font-semibold text-slate-900">
-                    Model no.:
-                  </span>
-                  <span className="text-base text-slate-700">AC-M16-SC</span>
-                </div>
+              {/* Text 2 */}
+              <div>
+                <span className="mr-1 font-semibold text-slate-900">
+                  Model no.:
+                </span>
+                <span className="text-base text-slate-700">AC-M16-SC</span>
               </div>
             </div>
+          </div>
 
-            {/* Specification Item 2 */}
-            <div className="grid grid-cols-1 border-y border-slate-200 md:grid-cols-2 lg:grid-cols-2">
-              <div className="flex flex-col rounded-lg py-4">
-                <span className="text-sm font-medium text-slate-700"></span>
-                <span className="text-base font-semibold text-slate-900">
-                  Physical Specifications
+          {/* Specification Item 2 */}
+          <div className="grid grid-cols-1 pt-8 md:grid-cols-2">
+            <p className="text-base font-semibold text-slate-900">
+              Physical Specifications
+            </p>
+
+            <div className="flex flex-col gap-2">
+              {/* Text 1 */}
+              <div>
+                <span className="mr-1 font-semibold text-slate-900">
+                  Dimensions:
                 </span>
+                <span className="text-base text-slate-700">250x250x555mm</span>
               </div>
-
-              <div className="flex flex-col rounded-lg py-4">
-                {/* Text 1 */}
-                <div>
-                  <span className="mr-1 font-semibold text-slate-900">
-                    Dimensions:
-                  </span>
-                  <span className="text-base text-slate-700">
-                    250x250x555mm
-                  </span>
-                </div>
-                {/* Text 2 */}
-                <div>
-                  <span className="mr-1 font-semibold text-slate-900">
-                    Net weight:
-                  </span>
-                  <span className="text-base text-slate-700">
-                    Approx. 5.6kg
-                  </span>
-                </div>
+              {/* Text 2 */}
+              <div>
+                <span className="mr-1 font-semibold text-slate-900">
+                  Net weight:
+                </span>
+                <span className="text-base text-slate-700">Approx. 5.6kg</span>
               </div>
             </div>
+          </div>
 
-            {/* Specification Item 3 */}
-            <div className="grid grid-cols-1 border-y border-slate-200 md:grid-cols-2 lg:grid-cols-2">
-              <div className="flex flex-col rounded-lg py-4">
-                <span className="text-sm font-medium text-slate-700"></span>
-                <span className="text-base font-semibold text-slate-900">
-                  Performance and Coverage
+          {/* Specification Item 3 */}
+          <div className="grid grid-cols-1 pt-8 md:grid-cols-2">
+            <p className="text-base font-semibold text-slate-900">
+              Performance and Coverage
+            </p>
+
+            <div className="flex flex-col gap-2">
+              {/* Text 1 */}
+              <div>
+                <span className="mr-1 font-semibold text-slate-900">
+                  Effective coverage area:
                 </span>
+                <span className="text-base text-slate-700">28-48m²</span>
               </div>
-
-              <div className="flex flex-col rounded-lg py-4">
-                {/* Text 1 */}
-                <div>
-                  <span className="mr-1 font-semibold text-slate-900">
-                    Effective coverage area:
-                  </span>
-                  <span className="text-base text-slate-700">28-48m²</span>
-                </div>
-                {/* Text 2 */}
-                <div>
-                  <span className="mr-1 font-semibold text-slate-900">
-                    Noise:
-                  </span>
-                  <span className="text-base text-slate-700">≤64dB(A)</span>
-                </div>
-                {/* Text 3 */}
-                <div>
-                  <span className="mr-1 font-semibold text-slate-900">
-                    PM CADR:
-                  </span>
-                  <span className="text-base text-slate-700">400m³/h</span>
-                </div>
-                {/* Text 4 */}
-                <div>
-                  <span className="mr-1 font-semibold text-slate-900">
-                    Particle purification efficiency:
-                  </span>
-                  <span className="text-base text-slate-700"> High</span>
-                </div>
+              {/* Text 2 */}
+              <div>
+                <span className="mr-1 font-semibold text-slate-900">
+                  Noise:
+                </span>
+                <span className="text-base text-slate-700">≤64dB(A)</span>
+              </div>
+              {/* Text 3 */}
+              <div>
+                <span className="mr-1 font-semibold text-slate-900">
+                  PM CADR:
+                </span>
+                <span className="text-base text-slate-700">400m³/h</span>
+              </div>
+              {/* Text 4 */}
+              <div>
+                <span className="mr-1 font-semibold text-slate-900">
+                  Particle purification efficiency:
+                </span>
+                <span className="text-base text-slate-700"> High</span>
               </div>
             </div>
+          </div>
 
-            {/* Specification Item 4 */}
-            <div className="grid grid-cols-1 border-y border-slate-200 md:grid-cols-2 lg:grid-cols-2">
-              <div className="flex flex-col rounded-lg py-4">
-                <span className="text-sm font-medium text-slate-700"></span>
-                <span className="text-base font-semibold text-slate-900">
-                  Package Contents
-                </span>
-              </div>
+          {/* Specification Item 4 */}
+          <div className="grid grid-cols-1 pt-8 md:grid-cols-2">
+            <p className="text-base font-semibold text-slate-900">
+              Package Contents
+            </p>
 
-              <div className="flex flex-col rounded-lg py-4">
-                {/* Text 1 */}
-                <div>
-                  <span className="text-base text-slate-700">
-                    Xiaomi Smart Air Purifier 4 x1
-                  </span>
-                </div>
-                {/* Text 2 */}
-                <div>
-                  <span className="text-base text-slate-700">Filter x1</span>
-                </div>
-                {/* Text 3 */}
-                <div>
-                  <span className="text-base text-slate-700">
-                    User manual x1
-                  </span>
-                </div>
-                {/* Text 4 */}
-                <div>
-                  <span className="text-base text-slate-700">
-                    Power cable x1
-                  </span>
-                </div>
-              </div>
+            <div className="flex flex-col gap-2">
+              <p className="text-base text-slate-700">
+                Xiaomi Smart Air Purifier 4 x1
+              </p>
+              <p className="text-base text-slate-700">Filter x1</p>
+
+              <p className="text-base text-slate-700">User manual x1</p>
+
+              <p className="text-base text-slate-700">Power cable x1</p>
             </div>
           </div>
         </FadeIn>
