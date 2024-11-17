@@ -30,7 +30,7 @@ const Blog = () => {
         />
       </Helmet>
       <main className="flex flex-col gap-20 md:gap-48">
-        <Splash src={articles[5].pic} alt="Xiaomi Smart Air Purifier 4">
+        <Splash src={articles[2].pic} alt="Xiaomi Smart Air Purifier 4">
           <div className="flex min-h-svh w-full items-center justify-center px-4 py-12 pt-32 md:min-h-full md:px-16 md:py-32 lg:justify-end">
             <div className="flex max-w-lg flex-col items-center gap-8 rounded-3xl bg-white px-8 py-6 text-left">
               <MiText className="font-medium text-emerald-600">
@@ -39,11 +39,11 @@ const Blog = () => {
               <div>
                 <MaskText
                   variant="splash"
-                  text={articles[5].title}
+                  text={articles[2].title}
                   className="mb-3 text-3xl font-medium sm:text-4xl lg:text-5xl"
                 />
                 <p className="mb-4 flex w-full items-start">
-                  {articles[5].date}
+                  {articles[2].date}
                 </p>
                 <p className="text-slate-700">
                   Transform your home into a sanctuary with these essentials for
@@ -52,7 +52,7 @@ const Blog = () => {
                 </p>
               </div>
               <Button asChild>
-                <Link to="/article/5">Read More</Link>
+                <Link to="/article/2">Read More</Link>
               </Button>
             </div>
           </div>
