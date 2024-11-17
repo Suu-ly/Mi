@@ -173,7 +173,7 @@ const Product = () => {
               alt="Smart Air Purifier 4 in use"
               className="absolute inset-0 -z-10"
             />
-            <div className="flex size-full items-start justify-center px-4 py-8 md:p-16">
+            <div className="flex size-full items-start justify-center px-4 pb-8 pt-[104px] md:px-16">
               <div className="z-10 mx-auto max-w-3xl px-4 text-center">
                 <MaskText
                   variant="header"
@@ -210,7 +210,7 @@ const Product = () => {
                 />
               </FadeIn>
             </div>
-            <div className="max-h-screen w-full min-w-60 flex-1">
+            <div className="w-full min-w-60 flex-1">
               <img
                 src={Artist}
                 alt="Xiaomi Smart Air Purifier 4 TÜV Rheinland Allergy Care Certification"
@@ -231,7 +231,7 @@ const Product = () => {
                 </MiText>
               </FadeIn>
             </div>
-            <div className="max-h-screen w-full min-w-60 flex-1">
+            <div className="w-full min-w-60 flex-1">
               <img
                 src={NegativeIons}
                 alt="Smart Air Purifier 4"
@@ -302,7 +302,7 @@ const Product = () => {
           </FadeIn>
 
           <div className="space-y-8 px-4 md:px-16">
-            <div className="relative h-screen overflow-hidden rounded-3xl">
+            <div className="relative h-[75vh] overflow-hidden rounded-3xl">
               {/* Image */}
               <img
                 src={OneTouch}
@@ -331,9 +331,9 @@ const Product = () => {
               </div>
             </div>
 
-            <div className="relative h-screen overflow-hidden rounded-3xl">
+            <div className="relative h-[75vh] overflow-hidden rounded-3xl">
               <div
-                className="relative h-svh w-full bg-cover bg-center"
+                className="relative size-full bg-cover bg-center"
                 style={{ backgroundImage: `url(${Reading})` }}
               >
                 {/* Gradient Overlay */}
@@ -358,7 +358,7 @@ const Product = () => {
               </div>
             </div>
 
-            <div className="relative h-screen overflow-hidden rounded-3xl">
+            <div className="relative h-[75vh] overflow-hidden rounded-3xl">
               {/* Image */}
               <img
                 src={Mobile}
@@ -406,7 +406,7 @@ const Product = () => {
             className="relative h-svh w-full bg-cover bg-center"
             style={{ backgroundImage: `url(${RealTime})` }}
           >
-            <div className="flex size-full items-start justify-center px-4 py-8 md:p-16">
+            <div className="flex size-full items-start justify-center px-4 pb-8 pt-[104px] md:px-16">
               <div className="mx-auto max-w-3xl text-center">
                 <MaskText
                   variant="header"
@@ -526,7 +526,7 @@ const Product = () => {
             alt="Smart Air Purifier 4 night mode"
             className="absolute inset-0 -z-10"
           />
-          <div className="flex size-full items-start justify-center px-4 py-8 md:p-16">
+          <div className="flex size-full items-start justify-center px-4 pb-8 pt-[104px] md:px-16">
             <div className="mx-auto max-w-3xl text-center">
               <MaskText
                 variant="header"
@@ -544,7 +544,7 @@ const Product = () => {
         </section>
 
         <section className="relative">
-          <div className="absolute inset-0 z-10 flex flex-col items-center gap-8 px-4 py-8 md:p-16">
+          <div className="absolute inset-0 z-10 flex flex-col items-center gap-8 px-4 py-8 md:px-16">
             <MaskText variant="header" text="Discover Fresh Air Today" />
             <Button asChild>
               <Link to="/order">Order now</Link>
@@ -553,7 +553,7 @@ const Product = () => {
           <Parallax
             src={Cta}
             alt="Smart Air Purifier 4"
-            className="h-screen w-full"
+            className="h-[75vh] w-full"
           />
         </section>
       </main>
