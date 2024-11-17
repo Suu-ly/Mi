@@ -5,9 +5,10 @@ import { HTMLAttributes, useRef } from "react";
 type ParallaxProps = {
   src: string;
   alt: string;
+  animate?: boolean;
 } & HTMLAttributes<HTMLDivElement>;
 
-const Parallax = ({ className, src, alt }: ParallaxProps) => {
+const Parallax = ({ className, src, alt, animate = true }: ParallaxProps) => {
   const location = useRef(null);
   const { scrollYProgress } = useScroll({
     target: location,
@@ -19,7 +20,7 @@ const Parallax = ({ className, src, alt }: ParallaxProps) => {
     <div ref={location} className={cn("overflow-hidden", className)}>
       <div className="flex size-full items-center">
         <motion.img
-          style={{ y }}
+          style={animate ? { y } : undefined}
           src={src}
           alt={alt}
           className="min-h-full w-full object-cover"

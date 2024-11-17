@@ -45,31 +45,8 @@ const Product = () => {
       </Helmet>
       <main className="flex flex-col gap-48">
         <Splash
-          src={ProductSplash}
+          src={isLarge ? ProductSplash : ProductSplash2}
           alt="Xiaomi Smart Air Purifier 4"
-          className="hidden md:block"
-        >
-          <div className="flex size-full items-end justify-start px-4 py-12 md:px-16 md:py-32">
-            <div className="flex max-w-xl flex-col items-start gap-8 text-left">
-              <MaskText
-                variant="splash"
-                text="Smart Air Purifier 4"
-                className="text-slate-50"
-              />
-              <MiText className="text-slate-50">
-                Experience fresh, clean air, for a healthier you.
-              </MiText>
-              <Button asChild>
-                <Link to="/precheckout">Buy Now</Link>
-              </Button>
-            </div>
-          </div>
-        </Splash>
-
-        <Splash
-          src={ProductSplash2}
-          alt="Xiaomi Smart Air Purifier 4"
-          className="md:hidden"
         >
           <div className="flex size-full items-end justify-start px-4 py-12 md:px-16 md:py-32">
             <div className="flex max-w-xl flex-col items-start gap-8 text-left">
@@ -110,15 +87,10 @@ const Product = () => {
           </div>
 
           <Parallax
-            src={ThreeFiltersOne}
+            src={isLarge ? ThreeFiltersOne : ThreeFiltersTwo}
+            animate={isLarge}
             alt="Xiaomi filter system"
-            className="hidden h-svh w-full md:block" // Hide on mobile, show on large screens
-          />
-
-          <img
-            src={ThreeFiltersTwo}
-            alt="Xiaomi filter system"
-            className="gap-8 bg-gray-200/50 md:hidden" // Show only on mobile (sm screens)
+            className="w-full md:block md:h-svh" // Hide on mobile, show on large screens
           />
 
           <div className="relative h-svh min-h-[576px] w-full bg-cover bg-center md:px-16">
@@ -472,8 +444,8 @@ const Product = () => {
             </FadeIn>
           </div>
 
-          <FadeIn className="flex w-full flex-col justify-center gap-16 px-4 text-center md:flex-row md:gap-8 md:px-16">
-            <div>
+          <FadeIn className="flex w-full flex-col gap-16 px-4 text-center md:flex-row md:gap-8 md:px-16">
+            <div className="w-full">
               <img
                 src={EasyOpen}
                 alt="Easy Open"
@@ -485,7 +457,7 @@ const Product = () => {
               </p>
               <p className="text-lg text-slate-700">Magnetic-doors</p>
             </div>
-            <div>
+            <div className="w-full">
               <img
                 src={Durable}
                 alt="Durable"
@@ -514,7 +486,7 @@ const Product = () => {
           </div>
 
           <FadeIn className="flex w-full flex-col justify-center gap-16 px-4 text-center md:flex-row md:gap-8 md:px-16">
-            <div>
+            <div className="w-full">
               <img
                 src={RemoveGrill}
                 alt="Remove Grill"
@@ -525,7 +497,7 @@ const Product = () => {
               </p>
               <p className="text-lg text-slate-700">Remove the Grill</p>
             </div>
-            <div>
+            <div className="w-full">
               <img
                 src={CleanGrill}
                 alt="Clean Grill"
@@ -538,7 +510,7 @@ const Product = () => {
                 Clean air ducts and blades
               </p>
             </div>
-            <div>
+            <div className="w-full">
               <img
                 src={PlaceGrill}
                 alt="Place Grill"
