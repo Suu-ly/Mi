@@ -26,12 +26,14 @@ import OneTouch from "../assets/product/onetouch.png";
 import Phone from "../assets/product/phone.png";
 import PlaceGrill from "../assets/product/placegrill.png";
 import ProductSplash from "../assets/product/productsplash.jpg";
+import ProductSplash2 from "../assets/product/productsplash2.jpg";
 import Reading from "../assets/product/reading.png";
 import RealTime from "../assets/product/realtime.jpg";
 import RemoveGrill from "../assets/product/removegrill.png";
 import Replacements from "../assets/product/replacements.png";
 import Tap from "../assets/product/tap.png";
-import ThreeFiltersEdit from "../assets/product/threefilters.png";
+import ThreeFiltersOne from "../assets/product/threefilters1.png";
+import ThreeFiltersTwo from "../assets/product/threefilters2.png";
 
 const Product = () => {
   const isLarge = useMediaQuery("(min-width: 768px)");
@@ -42,7 +44,33 @@ const Product = () => {
         <title>Introducing · Smart Air Purifier 4</title>
       </Helmet>
       <main className="flex flex-col gap-48">
-        <Splash src={ProductSplash} alt="Xiaomi Smart Air Purifier 4">
+        <Splash
+          src={ProductSplash}
+          alt="Xiaomi Smart Air Purifier 4"
+          className="hidden md:block"
+        >
+          <div className="flex size-full items-end justify-start px-4 py-12 md:px-16 md:py-32">
+            <div className="flex max-w-xl flex-col items-start gap-8 text-left">
+              <MaskText
+                variant="splash"
+                text="Smart Air Purifier 4"
+                className="text-slate-50"
+              />
+              <MiText className="text-slate-50">
+                Experience fresh, clean air, for a healthier you.
+              </MiText>
+              <Button asChild>
+                <Link to="/precheckout">Buy Now</Link>
+              </Button>
+            </div>
+          </div>
+        </Splash>
+
+        <Splash
+          src={ProductSplash2}
+          alt="Xiaomi Smart Air Purifier 4"
+          className="md:hidden"
+        >
           <div className="flex size-full items-end justify-start px-4 py-12 md:px-16 md:py-32">
             <div className="flex max-w-xl flex-col items-start gap-8 text-left">
               <MaskText
@@ -82,9 +110,15 @@ const Product = () => {
           </div>
 
           <Parallax
-            src={ThreeFiltersEdit}
+            src={ThreeFiltersOne}
             alt="Xiaomi filter system"
-            className="h-svh w-full"
+            className="hidden h-svh w-full md:block" // Hide on mobile, show on large screens
+          />
+
+          <img
+            src={ThreeFiltersTwo}
+            alt="Xiaomi filter system"
+            className="gap-8 bg-gray-200/50 md:hidden" // Show only on mobile (sm screens)
           />
 
           <div className="relative h-svh min-h-[576px] w-full bg-cover bg-center md:px-16">
@@ -438,7 +472,7 @@ const Product = () => {
             </FadeIn>
           </div>
 
-          <FadeIn className="flex w-full flex-col gap-16 px-4 text-center md:flex-row md:gap-8 md:px-16">
+          <FadeIn className="flex w-full flex-col justify-center gap-16 px-4 text-center md:flex-row md:gap-8 md:px-16">
             <div>
               <img
                 src={EasyOpen}
@@ -479,7 +513,7 @@ const Product = () => {
             </FadeIn>
           </div>
 
-          <FadeIn className="flex w-full flex-col gap-16 px-4 text-center md:flex-row md:gap-8 md:px-16">
+          <FadeIn className="flex w-full flex-col justify-center gap-16 px-4 text-center md:flex-row md:gap-8 md:px-16">
             <div>
               <img
                 src={RemoveGrill}
