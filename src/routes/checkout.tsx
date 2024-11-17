@@ -120,7 +120,7 @@ const Checkout = () => {
                       defaultChecked
                       className="peer/credit sr-only"
                     />
-                    <div className="flex cursor-pointer items-center gap-3 rounded-3xl border border-slate-200 px-4 py-3 font-medium text-slate-900 outline outline-0 outline-offset-4 outline-blue-700 ring-0 ring-emerald-600 transition-shadow peer-checked/credit:ring-2 peer-focus-visible/credit:outline-2">
+                    <div className="flex cursor-pointer items-center gap-3 rounded-3xl border border-slate-300 px-4 py-3 font-medium text-slate-900 outline outline-0 outline-offset-4 outline-blue-700 ring-0 ring-emerald-600 transition-shadow peer-checked/credit:ring-2 peer-focus-visible/credit:outline-2">
                       <MaterialSymbol icon="credit_card" size={24} />
                       Credit or Debit Card
                     </div>
@@ -133,7 +133,7 @@ const Checkout = () => {
                       value="credit"
                       className="peer/paynow sr-only"
                     />
-                    <div className="flex cursor-pointer items-center gap-3 rounded-3xl border border-slate-200 px-4 py-3 font-medium text-slate-900 outline outline-0 outline-offset-4 outline-blue-700 ring-0 ring-emerald-600 transition-shadow peer-checked/paynow:ring-2 peer-focus-visible/paynow:outline-2">
+                    <div className="flex cursor-pointer items-center gap-3 rounded-3xl border border-slate-300 px-4 py-3 font-medium text-slate-900 outline outline-0 outline-offset-4 outline-blue-700 ring-0 ring-emerald-600 transition-shadow peer-checked/paynow:ring-2 peer-focus-visible/paynow:outline-2">
                       <img src={Paynow} alt="paynow" className="h-6" />
                       Paynow
                     </div>
