@@ -100,7 +100,7 @@ const FAQ = [
   },
   {
     question:
-      "Can people with whom the Xiaomi Smart Air Purifier 4 Pro has been ‘shared' upgrade the device firmware?",
+      "Can people with whom the Xiaomi Smart Air Purifier 4 Pro has been 'shared' upgrade the device firmware?",
     answer: "These ‘sharers' cannot upgrade the firmware yet.",
   },
   {

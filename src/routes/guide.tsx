@@ -2,17 +2,17 @@ import MaskText from "@/components/maskText";
 import Splash from "@/components/splash";
 import MiText from "@/components/ui/miText";
 import { Helmet } from "react-helmet-async";
-import UserGuideSplash from "../assets/userguide/userguide_splash.jpg";
-import ProductOverview from "../assets/userguide/productoverview.png";
+import FilterCabinet from "../assets/userguide/filtercabinet.png";
 import Instructions1 from "../assets/userguide/instructions1.png";
 import Instructions2 from "../assets/userguide/instructions2.png";
-import PowerModeButton from "../assets/userguide/powermodebutton.png";
-import OnOffButton from "../assets/userguide/onoffbutton.png";
-import ScreenDisplay from "../assets/userguide/screendisplay.png";
-import ResetWifi from "../assets/userguide/resetwifi.png";
 import Maintenance from "../assets/userguide/maintenance.png";
-import FilterCabinet from "../assets/userguide/filtercabinet.png";
+import OnOffButton from "../assets/userguide/onoffbutton.png";
+import PowerModeButton from "../assets/userguide/powermodebutton.png";
+import ProductOverview from "../assets/userguide/productoverview.png";
+import ResetWifi from "../assets/userguide/resetwifi.png";
+import ScreenDisplay from "../assets/userguide/screendisplay.png";
 import Specifications from "../assets/userguide/specificatiions.png";
+import UserGuideSplash from "../assets/userguide/userguide_splash.jpg";
 
 const warnings = [
   {
@@ -112,9 +112,9 @@ const Guide = () => {
       </Helmet>
       <main className="flex flex-col gap-48">
         <Splash src={UserGuideSplash} alt="Xiaomi Smart Air Purifier 4">
-          <div className="flex size-full items-start justify-center px-4 py-32 md:px-16 md:py-56">
-            <div className="mr-12 flex max-w-lg flex-col items-end gap-8 text-right md:mr-20">
-              <MaskText variant="splash" text="User Guide" />
+          <div className="flex size-full justify-center px-4 py-16 md:px-16 md:py-32">
+            <div className="relative top-1/4 max-w-lg text-center">
+              <MaskText variant="splash" text="User Guide" className="mb-8" />
               <MiText className="font-medium text-slate-800">
                 Xiaomi Smart Air Purifier 4
               </MiText>
@@ -162,8 +162,8 @@ const Guide = () => {
           />
           <img
             src={ProductOverview}
-            alt="ProductOverview"
-            className="size-full object-cover"
+            alt="Product Overview"
+            className="size-full rounded-3xl object-cover"
           />
         </section>
         {/* Instructions */}
@@ -177,16 +177,16 @@ const Guide = () => {
             To ensure a better purification, maintain a certain distance between
             the air inlets and walls or other objects.
           </MiText>
-          <div className="flex justify-center gap-4">
+          <div className="flex flex-col justify-center gap-8 md:flex-row">
             <img
               src={Instructions1}
-              alt="Instructions1"
-              className="w-1/2 max-w-[50vw] object-cover"
+              alt="Instructions 1"
+              className="w-full rounded-3xl object-cover"
             />
             <img
               src={Instructions2}
-              alt="Instructions2"
-              className="w-1/2 max-w-[50vw] object-cover"
+              alt="Instructions 2"
+              className="w-full rounded-3xl object-cover"
             />
           </div>
         </section>
@@ -207,8 +207,8 @@ const Guide = () => {
           </MiText>
           <img
             src={PowerModeButton}
-            alt="PowerModeButton"
-            className="mb-24 size-full object-cover"
+            alt="Power Mode Button"
+            className="mb-24 size-full rounded-3xl object-cover"
           />
           {/* On-off button */}
           <MiText className="mb-6 text-xl font-medium sm:text-2xl lg:text-3xl">
@@ -220,8 +220,8 @@ const Guide = () => {
           </MiText>
           <img
             src={OnOffButton}
-            alt="OnOffButton"
-            className="mb-24 size-full object-cover"
+            alt="On Off Button"
+            className="mb-24 size-full rounded-3xl object-cover"
           />
           {/* Screen display */}
           <MiText className="mb-6 text-xl font-medium sm:text-2xl lg:text-3xl">
@@ -232,8 +232,8 @@ const Guide = () => {
           </MiText>
           <img
             src={ScreenDisplay}
-            alt="ScreenDisplay"
-            className="mb-24 size-full object-cover"
+            alt="Screen Display"
+            className="mb-24 size-full rounded-3xl object-cover"
           />
           {/* Reset wifi */}
           <MiText className="mb-6 text-xl font-medium sm:text-2xl lg:text-3xl">
@@ -248,7 +248,7 @@ const Guide = () => {
           <img
             src={ResetWifi}
             alt="ResetWifi"
-            className="mb-24 size-full object-cover"
+            className="mb-24 size-full rounded-3xl object-cover"
           />
           {/* Filter replacement */}
           <MiText className="mb-6 text-xl font-medium sm:text-2xl lg:text-3xl">
@@ -283,7 +283,7 @@ const Guide = () => {
           <img
             src={Maintenance}
             alt="Maintenance"
-            className="mb-24 size-full object-cover"
+            className="mb-24 size-full rounded-3xl object-cover"
           />
           <MiText className="mb-6 text-xl font-medium sm:text-2xl lg:text-3xl">
             Clean the filter cabinet
@@ -295,18 +295,20 @@ const Guide = () => {
           <img
             src={FilterCabinet}
             alt="FilterCabinet"
-            className="mb-24 size-full object-cover"
+            className="mb-24 size-full rounded-3xl object-cover"
           />
           <MiText className="mb-6 text-xl font-medium sm:text-2xl lg:text-3xl">
-          Clean laser particle sensor
+            Clean laser particle sensor
           </MiText>
           <MiText className="mb-8">
-          Use a non-sharp tool to open the laser particle sensor cover, and use an air blow gun or hair dryer to clean the laser particle sensor and its back cover.
+            Use a non-sharp tool to open the laser particle sensor cover, and
+            use an air blow gun or hair dryer to clean the laser particle sensor
+            and its back cover.
           </MiText>
         </section>
         {/* Specifications */}
         <section className="mx-auto max-w-5xl px-4 md:px-16">
-        <MaskText
+          <MaskText
             variant="header"
             text="Specifications"
             className="mb-12 text-left"
@@ -314,7 +316,7 @@ const Guide = () => {
           <img
             src={Specifications}
             alt="Specifications"
-            className="size-full object-cover"
+            className="size-full rounded-3xl object-cover"
           />
         </section>
       </main>
